@@ -23,23 +23,15 @@
 		9600AEE21F55ABC9004A7002 /* identityPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600AEE11F55ABC9004A7002 /* identityPicCell.swift */; };
 		9600AEE41F55AEF7004A7002 /* IdentityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600AEE31F55AEF7004A7002 /* IdentityTableViewController.swift */; };
 		9600AEE61F55B3CD004A7002 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600AEE51F55B3CD004A7002 /* AccountViewController.swift */; };
+		960E0A571F5AA83C00DDF219 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960E0A561F5AA83C00DDF219 /* Home.storyboard */; };
+		960E0A591F5AAE7000DDF219 /* CalculateVolumeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960E0A581F5AAE7000DDF219 /* CalculateVolumeView.xib */; };
 		962B924B1F4B1D150077AFF9 /* MessageOnePicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962B924A1F4B1D150077AFF9 /* MessageOnePicTableViewCell.xib */; };
 		962B924E1F4B26DD0077AFF9 /* MessageOnePicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B924C1F4B26DD0077AFF9 /* MessageOnePicTableViewCell.swift */; };
 		962B92511F4B27E80077AFF9 /* ShareMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B92501F4B27E80077AFF9 /* ShareMessageController.swift */; };
 		962B92531F4B28EE0077AFF9 /* EDMBaseTableviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B92521F4B28EE0077AFF9 /* EDMBaseTableviewCell.swift */; };
-		962B92611F4DC2FC0077AFF9 /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B92551F4DC2FC0077AFF9 /* AkiraTextField.swift */; };
-		962B92621F4DC2FC0077AFF9 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B92561F4DC2FC0077AFF9 /* HoshiTextField.swift */; };
-		962B92631F4DC2FC0077AFF9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 962B92571F4DC2FC0077AFF9 /* Info.plist */; };
-		962B92641F4DC2FC0077AFF9 /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B92581F4DC2FC0077AFF9 /* IsaoTextField.swift */; };
-		962B92651F4DC2FC0077AFF9 /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B92591F4DC2FC0077AFF9 /* JiroTextField.swift */; };
-		962B92661F4DC2FC0077AFF9 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B925A1F4DC2FC0077AFF9 /* KaedeTextField.swift */; };
-		962B92671F4DC2FC0077AFF9 /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B925B1F4DC2FC0077AFF9 /* MadokaTextField.swift */; };
-		962B92681F4DC2FC0077AFF9 /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B925C1F4DC2FC0077AFF9 /* MinoruTextField.swift */; };
-		962B92691F4DC2FC0077AFF9 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B925E1F4DC2FC0077AFF9 /* TextFieldEffects.swift */; };
-		962B926A1F4DC2FC0077AFF9 /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B925F1F4DC2FC0077AFF9 /* YokoTextField.swift */; };
-		962B926B1F4DC2FC0077AFF9 /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B92601F4DC2FC0077AFF9 /* YoshikoTextField.swift */; };
 		962B92751F4DC4D50077AFF9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B92741F4DC4D50077AFF9 /* LoginViewController.swift */; };
 		962B92771F4DC4F20077AFF9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962B92761F4DC4F20077AFF9 /* LoginViewController.xib */; };
+		965DA14E1F5AEB6F009434FA /* SSPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 965DA14D1F5AEB6F009434FA /* SSPopup.m */; };
 		966077D71F4809CB0067006B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966077D61F4809CB0067006B /* HomeViewController.swift */; };
 		966077DC1F480C6E0067006B /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966077DA1F480C6E0067006B /* HomeHeaderView.swift */; };
 		966077DD1F480C6E0067006B /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966077DB1F480C6E0067006B /* HomeHeaderView.xib */; };
@@ -93,15 +85,10 @@
 		96626A771F433C4E00534C5A /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96626A6E1F433C4E00534C5A /* RAMAnimatedTabBarController.swift */; };
 		96626A781F433C4E00534C5A /* RAMBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96626A701F433C4E00534C5A /* RAMBadge.swift */; };
 		96626A791F433C4E00534C5A /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96626A711F433C4E00534C5A /* RAMItemAnimationProtocol.swift */; };
-		96626A881F47DBCF00534C5A /* LLCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96626A811F47DBCF00534C5A /* LLCycleScrollView.swift */; };
-		96626A891F47DBCF00534C5A /* LLCycleScrollViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96626A821F47DBCF00534C5A /* LLCycleScrollViewCell.swift */; };
-		96626A8A1F47DBCF00534C5A /* LLFilledPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96626A831F47DBCF00534C5A /* LLFilledPageControl.swift */; };
-		96626A8B1F47DBCF00534C5A /* LLPillPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96626A841F47DBCF00534C5A /* LLPillPageControl.swift */; };
-		96626A8C1F47DBCF00534C5A /* LLSnakePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96626A851F47DBCF00534C5A /* LLSnakePageControl.swift */; };
-		96626A8D1F47DBCF00534C5A /* LLViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96626A861F47DBCF00534C5A /* LLViewExtensions.swift */; };
 		96626A8E1F47DBCF00534C5A /* LLCycleScrollView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 96626A871F47DBCF00534C5A /* LLCycleScrollView.bundle */; };
 		96626A941F47DCFB00534C5A /* TwoLabeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96626A911F47DCFB00534C5A /* TwoLabeView.m */; };
 		96626A951F47DCFB00534C5A /* UIVerticalLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96626A931F47DCFB00534C5A /* UIVerticalLoopView.m */; };
+		96E0CAAC1F5AB2250019CE0D /* CalculateFreightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */; };
 		D8E8A7931FFDB519204A7875 /* Pods_ShipBao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94923F4781EE92B1D676E595 /* Pods_ShipBao.framework */; };
 /* End PBXBuildFile section */
 
@@ -143,24 +130,16 @@
 		9600AEE11F55ABC9004A7002 /* identityPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = identityPicCell.swift; sourceTree = "<group>"; };
 		9600AEE31F55AEF7004A7002 /* IdentityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentityTableViewController.swift; sourceTree = "<group>"; };
 		9600AEE51F55B3CD004A7002 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		960E0A561F5AA83C00DDF219 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		960E0A581F5AAE7000DDF219 /* CalculateVolumeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculateVolumeView.xib; sourceTree = "<group>"; };
 		962B924A1F4B1D150077AFF9 /* MessageOnePicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageOnePicTableViewCell.xib; sourceTree = "<group>"; };
 		962B924C1F4B26DD0077AFF9 /* MessageOnePicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageOnePicTableViewCell.swift; sourceTree = "<group>"; };
 		962B92501F4B27E80077AFF9 /* ShareMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareMessageController.swift; sourceTree = "<group>"; };
 		962B92521F4B28EE0077AFF9 /* EDMBaseTableviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EDMBaseTableviewCell.swift; sourceTree = "<group>"; };
-		962B92551F4DC2FC0077AFF9 /* AkiraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkiraTextField.swift; sourceTree = "<group>"; };
-		962B92561F4DC2FC0077AFF9 /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
-		962B92571F4DC2FC0077AFF9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		962B92581F4DC2FC0077AFF9 /* IsaoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsaoTextField.swift; sourceTree = "<group>"; };
-		962B92591F4DC2FC0077AFF9 /* JiroTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiroTextField.swift; sourceTree = "<group>"; };
-		962B925A1F4DC2FC0077AFF9 /* KaedeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
-		962B925B1F4DC2FC0077AFF9 /* MadokaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadokaTextField.swift; sourceTree = "<group>"; };
-		962B925C1F4DC2FC0077AFF9 /* MinoruTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinoruTextField.swift; sourceTree = "<group>"; };
-		962B925D1F4DC2FC0077AFF9 /* TextFieldEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
-		962B925E1F4DC2FC0077AFF9 /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
-		962B925F1F4DC2FC0077AFF9 /* YokoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YokoTextField.swift; sourceTree = "<group>"; };
-		962B92601F4DC2FC0077AFF9 /* YoshikoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshikoTextField.swift; sourceTree = "<group>"; };
 		962B92741F4DC4D50077AFF9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		962B92761F4DC4F20077AFF9 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		965DA14C1F5AEB6F009434FA /* SSPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPopup.h; sourceTree = "<group>"; };
+		965DA14D1F5AEB6F009434FA /* SSPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPopup.m; sourceTree = "<group>"; };
 		966077D61F4809CB0067006B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		966077DA1F480C6E0067006B /* HomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		966077DB1F480C6E0067006B /* HomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
@@ -221,17 +200,12 @@
 		96626A6E1F433C4E00534C5A /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
 		96626A701F433C4E00534C5A /* RAMBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBadge.swift; sourceTree = "<group>"; };
 		96626A711F433C4E00534C5A /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
-		96626A811F47DBCF00534C5A /* LLCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLCycleScrollView.swift; sourceTree = "<group>"; };
-		96626A821F47DBCF00534C5A /* LLCycleScrollViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLCycleScrollViewCell.swift; sourceTree = "<group>"; };
-		96626A831F47DBCF00534C5A /* LLFilledPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLFilledPageControl.swift; sourceTree = "<group>"; };
-		96626A841F47DBCF00534C5A /* LLPillPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLPillPageControl.swift; sourceTree = "<group>"; };
-		96626A851F47DBCF00534C5A /* LLSnakePageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLSnakePageControl.swift; sourceTree = "<group>"; };
-		96626A861F47DBCF00534C5A /* LLViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLViewExtensions.swift; sourceTree = "<group>"; };
 		96626A871F47DBCF00534C5A /* LLCycleScrollView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LLCycleScrollView.bundle; sourceTree = "<group>"; };
 		96626A901F47DCFB00534C5A /* TwoLabeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoLabeView.h; sourceTree = "<group>"; };
 		96626A911F47DCFB00534C5A /* TwoLabeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoLabeView.m; sourceTree = "<group>"; };
 		96626A921F47DCFB00534C5A /* UIVerticalLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIVerticalLoopView.h; sourceTree = "<group>"; };
 		96626A931F47DCFB00534C5A /* UIVerticalLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIVerticalLoopView.m; sourceTree = "<group>"; };
+		96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculateFreightView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +274,8 @@
 		9600AECC1F5062B1004A7002 /* DropDown */ = {
 			isa = PBXGroup;
 			children = (
+				965DA14C1F5AEB6F009434FA /* SSPopup.h */,
+				965DA14D1F5AEB6F009434FA /* SSPopup.m */,
 				9600AEC01F5062B1004A7002 /* DropDown.h */,
 				9600AEC11F5062B1004A7002 /* Info.plist */,
 				9600AEC51F5062B1004A7002 /* helpers */,
@@ -308,25 +284,6 @@
 			);
 			name = DropDown;
 			path = "../../../../../Downloads/DropDown-master/DropDown";
-			sourceTree = "<group>";
-		};
-		962B92541F4DC2FC0077AFF9 /* TextFieldEffects */ = {
-			isa = PBXGroup;
-			children = (
-				962B92551F4DC2FC0077AFF9 /* AkiraTextField.swift */,
-				962B92561F4DC2FC0077AFF9 /* HoshiTextField.swift */,
-				962B92571F4DC2FC0077AFF9 /* Info.plist */,
-				962B92581F4DC2FC0077AFF9 /* IsaoTextField.swift */,
-				962B92591F4DC2FC0077AFF9 /* JiroTextField.swift */,
-				962B925A1F4DC2FC0077AFF9 /* KaedeTextField.swift */,
-				962B925B1F4DC2FC0077AFF9 /* MadokaTextField.swift */,
-				962B925C1F4DC2FC0077AFF9 /* MinoruTextField.swift */,
-				962B925D1F4DC2FC0077AFF9 /* TextFieldEffects.h */,
-				962B925E1F4DC2FC0077AFF9 /* TextFieldEffects.swift */,
-				962B925F1F4DC2FC0077AFF9 /* YokoTextField.swift */,
-				962B92601F4DC2FC0077AFF9 /* YoshikoTextField.swift */,
-			);
-			path = TextFieldEffects;
 			sourceTree = "<group>";
 		};
 		962B926C1F4DC4AB0077AFF9 /* Login */ = {
@@ -435,6 +392,8 @@
 			children = (
 				966077DA1F480C6E0067006B /* HomeHeaderView.swift */,
 				966077DB1F480C6E0067006B /* HomeHeaderView.xib */,
+				960E0A581F5AAE7000DDF219 /* CalculateVolumeView.xib */,
+				96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -445,6 +404,7 @@
 				966077E91F4825C10067006B /* SendRecordTableViewController.swift */,
 				966077E51F48226C0067006B /* SendRecordViewController.swift */,
 				966077D61F4809CB0067006B /* HomeViewController.swift */,
+				960E0A561F5AA83C00DDF219 /* Home.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -663,7 +623,6 @@
 			isa = PBXGroup;
 			children = (
 				9600AECC1F5062B1004A7002 /* DropDown */,
-				962B92541F4DC2FC0077AFF9 /* TextFieldEffects */,
 				966077ED1F4842880067006B /* TransitionAnimation */,
 				966077FC1F4842880067006B /* TransitionTreasury */,
 				96626A8F1F47DCFB00534C5A /* LoopLableView */,
@@ -747,24 +706,10 @@
 		96626A7F1F47DBCF00534C5A /* LLCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				96626A801F47DBCF00534C5A /* LLCycleScrollView */,
 				96626A871F47DBCF00534C5A /* LLCycleScrollView.bundle */,
 			);
 			name = LLCycleScrollView;
 			path = ../Lib;
-			sourceTree = "<group>";
-		};
-		96626A801F47DBCF00534C5A /* LLCycleScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				96626A811F47DBCF00534C5A /* LLCycleScrollView.swift */,
-				96626A821F47DBCF00534C5A /* LLCycleScrollViewCell.swift */,
-				96626A831F47DBCF00534C5A /* LLFilledPageControl.swift */,
-				96626A841F47DBCF00534C5A /* LLPillPageControl.swift */,
-				96626A851F47DBCF00534C5A /* LLSnakePageControl.swift */,
-				96626A861F47DBCF00534C5A /* LLViewExtensions.swift */,
-			);
-			path = LLCycleScrollView;
 			sourceTree = "<group>";
 		};
 		96626A8F1F47DCFB00534C5A /* LoopLableView */ = {
@@ -905,9 +850,11 @@
 				96626A161F41F9FC00534C5A /* Assets.xcassets in Resources */,
 				962B924B1F4B1D150077AFF9 /* MessageOnePicTableViewCell.xib in Resources */,
 				96626A8E1F47DBCF00534C5A /* LLCycleScrollView.bundle in Resources */,
+				960E0A571F5AA83C00DDF219 /* Home.storyboard in Resources */,
 				96626A141F41F9FC00534C5A /* Main.storyboard in Resources */,
 				9600AED81F52AACB004A7002 /* Accout.storyboard in Resources */,
-				962B92631F4DC2FC0077AFF9 /* Info.plist in Resources */,
+				96E0CAAC1F5AB2250019CE0D /* CalculateFreightView.xib in Resources */,
+				960E0A591F5AAE7000DDF219 /* CalculateVolumeView.xib in Resources */,
 				9600AED11F5062B1004A7002 /* DropDownCell.xib in Resources */,
 				962B92771F4DC4F20077AFF9 /* LoginViewController.xib in Resources */,
 				9600AEE01F52BD36004A7002 /* identityPicCell.xib in Resources */,
@@ -986,11 +933,7 @@
 				96626A731F433C4E00534C5A /* RAMFrameItemAnimation.swift in Sources */,
 				966078151F4842880067006B /* TransitionAnimationHelper.swift in Sources */,
 				966078141F4842880067006B /* TaaskyFlipTransitionAnimation.swift in Sources */,
-				962B92651F4DC2FC0077AFF9 /* JiroTextField.swift in Sources */,
-				96626A8C1F47DBCF00534C5A /* LLSnakePageControl.swift in Sources */,
 				966077E41F48179B0067006B /* GeneralDataSource.swift in Sources */,
-				962B92671F4DC2FC0077AFF9 /* MadokaTextField.swift in Sources */,
-				96626A8B1F47DBCF00534C5A /* LLPillPageControl.swift in Sources */,
 				9660781E1F4842880067006B /* UITabBarController+TRTransition.swift in Sources */,
 				966077EA1F4825C10067006B /* SendRecordTableViewController.swift in Sources */,
 				966078181F4842880067006B /* TRViewControllerTransitionDelegate.swift in Sources */,
@@ -998,7 +941,6 @@
 				966078161F4842880067006B /* TRTransitionAnimations.swift in Sources */,
 				96626A771F433C4E00534C5A /* RAMAnimatedTabBarController.swift in Sources */,
 				9600AED31F5062B1004A7002 /* DropDown.swift in Sources */,
-				962B92691F4DC2FC0077AFF9 /* TextFieldEffects.swift in Sources */,
 				9660781D1F4842880067006B /* TRTabBarTransitionDelegate.swift in Sources */,
 				966078101F4842880067006B /* PageTransitionAnimation.swift in Sources */,
 				96626A111F41F9FC00534C5A /* ViewController.swift in Sources */,
@@ -1013,50 +955,40 @@
 				96626A741F433C4E00534C5A /* RAMFumeAnimation.swift in Sources */,
 				962B92751F4DC4D50077AFF9 /* LoginViewController.swift in Sources */,
 				9600AEDA1F52BA92004A7002 /* IdentityCell.swift in Sources */,
-				96626A8D1F47DBCF00534C5A /* LLViewExtensions.swift in Sources */,
-				962B926B1F4DC2FC0077AFF9 /* YoshikoTextField.swift in Sources */,
 				9660781B1F4842880067006B /* UINavigationController+TRPushPop.swift in Sources */,
 				9660780A1F4842880067006B /* BlixtTransitionAnimation.swift in Sources */,
 				96626A421F41FDF000534C5A /* UIView+Extension.swift in Sources */,
 				966078111F4842880067006B /* PopTipTransitionAnimation.swift in Sources */,
 				962B92531F4B28EE0077AFF9 /* EDMBaseTableviewCell.swift in Sources */,
-				962B92681F4DC2FC0077AFF9 /* MinoruTextField.swift in Sources */,
 				96626A0F1F41F9FC00534C5A /* AppDelegate.swift in Sources */,
 				966077DC1F480C6E0067006B /* HomeHeaderView.swift in Sources */,
 				962B92511F4B27E80077AFF9 /* ShareMessageController.swift in Sources */,
 				9600AED41F5062B1004A7002 /* DropDownCell.swift in Sources */,
 				9660781A1F4842880067006B /* TRNavgationTransitionDelegate.swift in Sources */,
-				96626A891F47DBCF00534C5A /* LLCycleScrollViewCell.swift in Sources */,
 				9660780D1F4842880067006B /* FadeTransitionAnimation.swift in Sources */,
 				966077E61F48226C0067006B /* SendRecordViewController.swift in Sources */,
 				966078171F4842880067006B /* TwitterTransitionAnimation.swift in Sources */,
 				96626A791F433C4E00534C5A /* RAMItemAnimationProtocol.swift in Sources */,
 				9600AED01F5062B1004A7002 /* DPDUIView+Extension.swift in Sources */,
-				962B92621F4DC2FC0077AFF9 /* HoshiTextField.swift in Sources */,
 				9660780F1F4842880067006B /* OMNITransitionAnimation.swift in Sources */,
 				9600AED61F5298F5004A7002 /* XZRNavButton.swift in Sources */,
 				96626A441F41FE9A00534C5A /* XZRRuntime.swift in Sources */,
-				962B92641F4DC2FC0077AFF9 /* IsaoTextField.swift in Sources */,
 				96626A951F47DCFB00534C5A /* UIVerticalLoopView.m in Sources */,
-				962B926A1F4DC2FC0077AFF9 /* YokoTextField.swift in Sources */,
 				96626A781F433C4E00534C5A /* RAMBadge.swift in Sources */,
 				966078121F4842880067006B /* ScanbotTransitionAnimation.swift in Sources */,
 				962B924E1F4B26DD0077AFF9 /* MessageOnePicTableViewCell.swift in Sources */,
 				966078211F4842880067006B /* TRViewControllerAnimatedTransitioning.swift in Sources */,
+				965DA14E1F5AEB6F009434FA /* SSPopup.m in Sources */,
 				9600AEE41F55AEF7004A7002 /* IdentityTableViewController.swift in Sources */,
 				966078131F4842880067006B /* SlideTransitionAnimation.swift in Sources */,
 				96626A471F41FF7C00534C5A /* Const.swift in Sources */,
-				962B92661F4DC2FC0077AFF9 /* KaedeTextField.swift in Sources */,
 				96626A941F47DCFB00534C5A /* TwoLabeView.m in Sources */,
 				96626A751F433C4E00534C5A /* RAMRotationAnimation.swift in Sources */,
 				9600AEE61F55B3CD004A7002 /* AccountViewController.swift in Sources */,
 				96626A761F433C4E00534C5A /* RAMTransitionItemAnimations.swift in Sources */,
-				96626A881F47DBCF00534C5A /* LLCycleScrollView.swift in Sources */,
 				966077E21F48175E0067006B /* UITableView+RegisterNib.swift in Sources */,
 				9660780E1F4842880067006B /* IBanTangTransitionAnimation.swift in Sources */,
 				9660780C1F4842880067006B /* ElevateTransitionAnimation.swift in Sources */,
-				962B92611F4DC2FC0077AFF9 /* AkiraTextField.swift in Sources */,
-				96626A8A1F47DBCF00534C5A /* LLFilledPageControl.swift in Sources */,
 				9600AED21F5062B1004A7002 /* DropDown+Appearance.swift in Sources */,
 				9600AECF1F5062B1004A7002 /* DPDKeyboardListener.swift in Sources */,
 				966078191F4842880067006B /* UIViewController+TRPresent.swift in Sources */,

@@ -7,30 +7,43 @@
 //
 
 import Foundation
-class ShareMessageController: UITableViewController {
+class ShareMessageController: UITableViewController,SSPopupDelegate {
     let dropDown = DropDown()
-    
+    var  navButton:XZRNavButton!
     override func viewDidLoad() {
         self.registerCell(String(describing: MessageOnePicTableViewCell.self));
         self.tableView.estimatedRowHeight=100;
         
         dropDown.dataSource = ["111","222","3333"]
+        
+     
+        
+       
         dropDown.dropdownWidth  = 200 ;
         dropDown.backgroundColor = UIColor.white;
         dropDown.separatorColor = rgbColor(r: 169, g: 169, b: 169);
         dropDown.selectionBackgroundColor = rgbColor(r: 169, g: 169, b: 169)
-        let button =  XZRNavButton(title: dropDown.dataSource.first!, image:UIImage.init(named: "Settings")! )
+        navButton =  XZRNavButton(title: dropDown.dataSource.first!, image:UIImage.init(named: "Settings")! )
         dropDown.direction = .bottom;
-        dropDown.bottomOffset = CGPoint(x:(button.size.width-dropDown.dropdownWidth!)/2 , y: 50)
-        button.addTarget(self, action:#selector(self.showDropDown) , for: .touchUpInside)
-        self.navigationItem.titleView = button;
+        dropDown.bottomOffset = CGPoint(x:(navButton.size.width-dropDown.dropdownWidth!)/2 , y: 50)
+        navButton.addTarget(self, action:#selector(self.showDropDown) , for: .touchUpInside)
+        self.navigationItem.titleView = navButton;
         self.tableView.rowHeight = UITableViewAutomaticDimension;
+        
+      
         
     }
     
     func showDropDown() {
         dropDown.anchorView = self.navigationItem.titleView;
         dropDown.show()
+        
+        let sspop =  SSPopup();
+        sspop.ssPopupDelegate = self;
+        self.view.addSubview(sspop)
+        sspop.createTableview(["111","222","3333"], withSender: navButton, withTitle: "select") { ( index) in
+    
+        }
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3;

@@ -8,7 +8,7 @@
 
 import Foundation
 import YNExpandableCell
-class IdentityTableViewController: UITableViewController,YNTableViewDelegate {
+class IdentityTableViewController:UIViewController,YNTableViewDelegate {
     
     @IBOutlet var ynTableView: YNTableView!
     override func viewDidLoad() {
@@ -22,7 +22,7 @@ class IdentityTableViewController: UITableViewController,YNTableViewDelegate {
     func tableView(_ tableView: YNTableView, expandCellWithHeightAt indexPath: IndexPath) -> YNTableViewCell? {
         let ynSliderCell = YNTableViewCell()
         ynSliderCell.cell = tableView.dequeueReusableCell(withIdentifier: "identityPicCell") as! identityPicCell
-        ynSliderCell.height = 142
+        ynSliderCell.height = 239
         
         
         
@@ -30,11 +30,11 @@ class IdentityTableViewController: UITableViewController,YNTableViewDelegate {
     }
 
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 3
-//    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 5
         } else if section == 1 {
@@ -45,7 +45,12 @@ class IdentityTableViewController: UITableViewController,YNTableViewDelegate {
         return 0
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 101
+    }
+    
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let expandableCell = tableView.dequeueReusableCell(withIdentifier: "IdentityCell") as! IdentityCell
        
         return expandableCell

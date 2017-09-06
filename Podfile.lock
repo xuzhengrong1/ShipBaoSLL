@@ -1,24 +1,38 @@
 PODS:
   - Alamofire (4.5.0)
+  - FTIndicator (1.2.2):
+    - FTIndicator/FTNotificationIndicator (= 1.2.2)
+    - FTIndicator/FTProgressIndicator (= 1.2.2)
+    - FTIndicator/FTToastIndicator (= 1.2.2)
+  - FTIndicator/FTNotificationIndicator (1.2.2)
+  - FTIndicator/FTProgressIndicator (1.2.2)
+  - FTIndicator/FTToastIndicator (1.2.2)
   - Kingfisher (3.10.4)
+  - Material (2.9.4):
+    - Material/Core (= 2.9.4)
+  - Material/Core (2.9.4)
   - ObjectMapper (2.2.8)
   - XLPagerTabStrip (7.0.0)
   - YNExpandableCell (1.1.0)
 
 DEPENDENCIES:
   - Alamofire
+  - FTIndicator
   - Kingfisher (~> 3.10.4)
+  - Material (~> 2.0)
   - ObjectMapper
   - XLPagerTabStrip
   - YNExpandableCell
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  FTIndicator: 6224eaa05acca50535aec791a33340525503618b
   Kingfisher: dc3a4983e86d2dfa89513664983a82340c11a289
+  Material: 06fa0a5f29c45c42608ae32f3be96f1c46558d13
   ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
   YNExpandableCell: 47bf7cff721aa535c0e9e1163bf22b5573441bb4
 
-PODFILE CHECKSUM: 92efe00574434ff8b8b0daca16ca1d8df03a6270
+PODFILE CHECKSUM: 74720e748779924e81144863229acf1819e86b58
 
 COCOAPODS: 1.2.0

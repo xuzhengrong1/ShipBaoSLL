@@ -7,6 +7,9 @@ target 'ShipBao'  do
     pod 'ObjectMapper'
     pod 'XLPagerTabStrip'
     pod 'YNExpandableCell'
+    pod 'Material', '~> 2.0'
+    pod 'FTIndicator'
+    
 #    pod 'TransitionTreasury', '~> 4.0.0'
 #    pod 'RAMAnimatedTabBarController', '~> 2.0.13'
 end

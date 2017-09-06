@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Material
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,9 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         UIApplication.shared.statusBarStyle = .lightContent
         
-//        window?.backgroundColor = UIColor.white
-//        window?.rootViewController = LoginViewController()
-//        window?.makeKeyAndVisible()
+        
+        window?.backgroundColor = UIColor.white
+        window?.rootViewController = LoginViewController()
+        window?.makeKeyAndVisible()
         return true
     }
 

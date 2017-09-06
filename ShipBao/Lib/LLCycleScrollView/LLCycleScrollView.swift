@@ -245,7 +245,7 @@ open class LLCycleScrollView: UIView, UICollectionViewDelegate, UICollectionView
     // }
     
     // 方向(swift后没有none，只能指定了)
-    fileprivate var position: UICollectionViewScrollPosition! = .centeredHorizontally
+    var position: UICollectionViewScrollPosition! = .centeredHorizontally
     
     // 是否纯文本
     fileprivate var isOnlyTitle: Bool = false

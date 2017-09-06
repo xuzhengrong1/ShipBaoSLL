@@ -9,6 +9,7 @@
 import Foundation
 class identityPicCell: UITableViewCell {
     override func awakeFromNib() {
-        
+        super.awakeFromNib();
+        self.selectionStyle = .none
     }
 }

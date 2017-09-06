@@ -1,6 +1,7 @@
 
 
 import UIKit
+import Material
 
 // 左右间距
 let kMargin:CGFloat = 15.0
@@ -74,7 +75,26 @@ func getControllerFromStoryBoard(_ storyBoardName:String, identity: String) -> U
 }
 
 
+let COLORLIKEGREEN = UIColor.hexStringToUIColor(hex:"#56bc7b")
+
 let SYSTEMFONT15 = UIFont.systemFont(ofSize: 15);
+
+let APP_ID = "18da20094d0-4e6ff-56baf-485aac4e9b9";
+
+
+extension ErrorTextField{
+    func configErrorTextField(){
+        self.placeholderNormalColor = .lightGray
+        self.placeholderActiveColor = COLORLIKEGREEN
+        self.dividerNormalColor = .lightGray
+        self.dividerActiveColor = COLORLIKEGREEN
+        
+       // emailField.textInset = 20
+        // Setting the visibilityIconButton color.
+//        passwordField.visibilityIconButton?.tintColor = Color.green.base.withAlphaComponent(passwordField.isSecureTextEntry ? 0.38 : 0.54)
+    }
+}
+
 
 /// 背景灰色
 func globalColor() -> UIColor {

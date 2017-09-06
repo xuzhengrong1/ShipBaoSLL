@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+
+import Material
 //import Toaster
 
 extension UIControl{
@@ -15,6 +17,7 @@ extension UIControl{
     override open class func initialize() {
 //       ap_tabbar()
         ap_navView()
+//        app_textField()
     }
     
     
@@ -25,10 +28,19 @@ extension UIControl{
 //      tabbar.isTranslucent = false
     }
     
+   
+    
     static func ap_navView()
     {
     
        let navAp =  UINavigationBar.appearance()
+        
+//        [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+//        navAp.backgroundImage(for: .default) = UIImage();
+        navAp.setBackgroundImage(UIImage(), for: .default)
+        navAp.shadowImage = UIImage();
+        
         navAp.barTintColor = NavTintColor
         navAp.titleTextAttributes =
             [NSForegroundColorAttributeName: UIColor.white,

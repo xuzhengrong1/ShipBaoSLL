@@ -20,7 +20,7 @@ class HomeHeaderView: UIView {
         self.marqueeView.addSubview(marquee!)
     }
      //var dataBanners : [Banner]  = []
-    @IBOutlet  var ssCyleBanner: LLCycleScrollView!
+    @IBOutlet  var ssCyleBanner: UIScrollView!
     @IBOutlet weak var marqueeView: UIView!
 
     
