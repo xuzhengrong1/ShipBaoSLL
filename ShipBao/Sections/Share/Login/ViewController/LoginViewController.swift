@@ -43,6 +43,9 @@ class LoginViewController: UIViewController {
             FTIndicator.showToastMessage("密碼不能為空！")
             return;
         }
+        YDMNetWorkTool.shared.postRequest(urlString: "member_login", params: ["email":"test3@test.com","password":"111111"]) { (response, error) in
+            
+        }
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -32,6 +32,8 @@
 		962B92751F4DC4D50077AFF9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B92741F4DC4D50077AFF9 /* LoginViewController.swift */; };
 		962B92771F4DC4F20077AFF9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962B92761F4DC4F20077AFF9 /* LoginViewController.xib */; };
 		965DA14E1F5AEB6F009434FA /* SSPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 965DA14D1F5AEB6F009434FA /* SSPopup.m */; };
+		965DA1511F60526B009434FA /* YDMNetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965DA1501F60526B009434FA /* YDMNetWorkTool.swift */; };
+		965DA1531F6171AE009434FA /* SwiftyMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965DA1521F6171AE009434FA /* SwiftyMD5.swift */; };
 		966077D71F4809CB0067006B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966077D61F4809CB0067006B /* HomeViewController.swift */; };
 		966077DC1F480C6E0067006B /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966077DA1F480C6E0067006B /* HomeHeaderView.swift */; };
 		966077DD1F480C6E0067006B /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966077DB1F480C6E0067006B /* HomeHeaderView.xib */; };
@@ -140,6 +142,8 @@
 		962B92761F4DC4F20077AFF9 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		965DA14C1F5AEB6F009434FA /* SSPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPopup.h; sourceTree = "<group>"; };
 		965DA14D1F5AEB6F009434FA /* SSPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPopup.m; sourceTree = "<group>"; };
+		965DA1501F60526B009434FA /* YDMNetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YDMNetWorkTool.swift; sourceTree = "<group>"; };
+		965DA1521F6171AE009434FA /* SwiftyMD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyMD5.swift; sourceTree = "<group>"; };
 		966077D61F4809CB0067006B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		966077DA1F480C6E0067006B /* HomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		966077DB1F480C6E0067006B /* HomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
@@ -318,6 +322,14 @@
 				962B92761F4DC4F20077AFF9 /* LoginViewController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		965DA14F1F60526B009434FA /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				965DA1501F60526B009434FA /* YDMNetWorkTool.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		966077C51F4809950067006B /* Sections */ = {
@@ -562,6 +574,7 @@
 		96626A0D1F41F9FC00534C5A /* ShipBao */ = {
 			isa = PBXGroup;
 			children = (
+				965DA14F1F60526B009434FA /* Request */,
 				966077C51F4809950067006B /* Sections */,
 				96626A611F433C4E00534C5A /* Vendor */,
 				96626A451F41FF7C00534C5A /* Global */,
@@ -611,6 +624,7 @@
 		96626A451F41FF7C00534C5A /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				965DA1521F6171AE009434FA /* SwiftyMD5.swift */,
 				962B92521F4B28EE0077AFF9 /* EDMBaseTableviewCell.swift */,
 				966078221F4B0FA80067006B /* EDMBaseNavigationController.swift */,
 				96626A461F41FF7C00534C5A /* Const.swift */,
@@ -979,6 +993,8 @@
 				962B924E1F4B26DD0077AFF9 /* MessageOnePicTableViewCell.swift in Sources */,
 				966078211F4842880067006B /* TRViewControllerAnimatedTransitioning.swift in Sources */,
 				965DA14E1F5AEB6F009434FA /* SSPopup.m in Sources */,
+				965DA1511F60526B009434FA /* YDMNetWorkTool.swift in Sources */,
+				965DA1531F6171AE009434FA /* SwiftyMD5.swift in Sources */,
 				9600AEE41F55AEF7004A7002 /* IdentityTableViewController.swift in Sources */,
 				966078131F4842880067006B /* SlideTransitionAnimation.swift in Sources */,
 				96626A471F41FF7C00534C5A /* Const.swift in Sources */,

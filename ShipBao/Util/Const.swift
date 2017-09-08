@@ -81,6 +81,14 @@ let SYSTEMFONT15 = UIFont.systemFont(ofSize: 15);
 
 let APP_ID = "18da20094d0-4e6ff-56baf-485aac4e9b9";
 
+let SUB_APP_ID = "4e6ff-56baf"
+
+let VERSIONSTR = "1.0"
+
+let SHIPBAO_APP = "SHIPBAO_APP"
+
+
+ let BASE_URL = "http://139.162.37.173:10004/api.php"
 
 extension ErrorTextField{
     func configErrorTextField(){
