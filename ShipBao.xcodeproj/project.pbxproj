@@ -34,6 +34,7 @@
 		965DA14E1F5AEB6F009434FA /* SSPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 965DA14D1F5AEB6F009434FA /* SSPopup.m */; };
 		965DA1511F60526B009434FA /* YDMNetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965DA1501F60526B009434FA /* YDMNetWorkTool.swift */; };
 		965DA1531F6171AE009434FA /* SwiftyMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965DA1521F6171AE009434FA /* SwiftyMD5.swift */; };
+		965DA1591F62DBA1009434FA /* ELJJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 965DA1581F62DBA1009434FA /* ELJJSON.m */; };
 		966077D71F4809CB0067006B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966077D61F4809CB0067006B /* HomeViewController.swift */; };
 		966077DC1F480C6E0067006B /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966077DA1F480C6E0067006B /* HomeHeaderView.swift */; };
 		966077DD1F480C6E0067006B /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966077DB1F480C6E0067006B /* HomeHeaderView.xib */; };
@@ -144,6 +145,8 @@
 		965DA14D1F5AEB6F009434FA /* SSPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPopup.m; sourceTree = "<group>"; };
 		965DA1501F60526B009434FA /* YDMNetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YDMNetWorkTool.swift; sourceTree = "<group>"; };
 		965DA1521F6171AE009434FA /* SwiftyMD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyMD5.swift; sourceTree = "<group>"; };
+		965DA1571F62DBA1009434FA /* ELJJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELJJSON.h; sourceTree = "<group>"; };
+		965DA1581F62DBA1009434FA /* ELJJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELJJSON.m; sourceTree = "<group>"; };
 		966077D61F4809CB0067006B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		966077DA1F480C6E0067006B /* HomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		966077DB1F480C6E0067006B /* HomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
@@ -636,6 +639,8 @@
 		96626A611F433C4E00534C5A /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				965DA1571F62DBA1009434FA /* ELJJSON.h */,
+				965DA1581F62DBA1009434FA /* ELJJSON.m */,
 				9600AECC1F5062B1004A7002 /* DropDown */,
 				966077ED1F4842880067006B /* TransitionAnimation */,
 				966077FC1F4842880067006B /* TransitionTreasury */,
@@ -1005,6 +1010,7 @@
 				966077E21F48175E0067006B /* UITableView+RegisterNib.swift in Sources */,
 				9660780E1F4842880067006B /* IBanTangTransitionAnimation.swift in Sources */,
 				9660780C1F4842880067006B /* ElevateTransitionAnimation.swift in Sources */,
+				965DA1591F62DBA1009434FA /* ELJJSON.m in Sources */,
 				9600AED21F5062B1004A7002 /* DropDown+Appearance.swift in Sources */,
 				9600AECF1F5062B1004A7002 /* DPDKeyboardListener.swift in Sources */,
 				966078191F4842880067006B /* UIViewController+TRPresent.swift in Sources */,

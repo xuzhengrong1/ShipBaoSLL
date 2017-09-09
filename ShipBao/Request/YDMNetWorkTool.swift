@@ -26,6 +26,7 @@ public class  YDMNetWorkTool : NSObject
     
     
     override init() {
+      
            sessionManager = Alamofire.SessionManager(configuration: URLSessionConfiguration.default);
 //        sessionManager
         
@@ -46,20 +47,22 @@ public class  YDMNetWorkTool : NSObject
 import Foundation
 extension YDMNetWorkTool {
     /// 发送POST请求
-    func request(urlString :  String,method: String, params : [String : Any]?, completionHandler : @escaping (_ responseObject : JSON?,_ error: NSError?)->() ) {
+    func request(urlString :  String,method: String, params : [String : String]?, completionHandler : @escaping (_ responseObject : JSON?,_ error: NSError?)->() ) {
     
         let url = URL(string: BASE_URL)
         if url != nil{
             var urlRequest = URLRequest(url: url!)
             urlRequest.httpMethod = method
             do {
-                
+                let paramst = "";
                 let requestStr  = self.formartParameters(params: params, methodName: urlString ,userToken: true);
-                if  requestStr.characters.count > 0 {
-                    let data = requestStr.data(using: .utf8);
+//                if  requestStr.characters.count > 0 {
+                let data = try? JSONSerialization.data(withJSONObject: requestStr, options: [])
+//                     let data = requestStr.data(using: .utf8);
                     urlRequest.httpBody = data
-                    urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-                    sessionManager.request(urlRequest).responseJSON{
+                    urlRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+                
+                    Alamofire.request(urlRequest).responseJSON{
                         response in
                         switch response.result {
                         case .success(let value):
@@ -70,7 +73,7 @@ extension YDMNetWorkTool {
                             completionHandler(nil,response.result.error! as NSError)
                             print("网络加载失败")
                         }};
-                }
+//                }
             } catch {
                 
             }
@@ -79,30 +82,49 @@ extension YDMNetWorkTool {
         
     }
     
-    func postRequest(urlString : String, params :  [String : Any]?, completionHandler : @escaping (_ responseObject : JSON?,_ error: NSError?)->() ) {
+    func postRequest(urlString : String, params :  [String : String]?, completionHandler : @escaping (_ responseObject : JSON?,_ error: NSError?)->() ) {
             self.request(urlString: urlString, method: "POST",params: params, completionHandler: completionHandler)
     }
     
-    func getRequest(urlString : String, params : [String : [String : Any]],  completionHandler : @escaping (_ responseObject : JSON?,_ error: NSError?)->() ) {
+    func getRequest(urlString : String, params : [String :String],  completionHandler : @escaping (_ responseObject : JSON?,_ error: NSError?)->() ) {
         self.request(urlString: urlString, method: "GET",params: params,  completionHandler: completionHandler)
     }
     
-    func formartParameters(params:[String: Any]? = nil ,methodName : String = "", userToken: Bool) -> String {
+    func formartParameters(params:[String: String]? = nil ,methodName : String = "", userToken: Bool) -> [String : Any] {
     
-//        let cookieHeader = (params.flatMap({ (key, value) -> String in
-//            return "\(key):\(value)"
-//        }) as Array).joined(separator: ";")
-        var  parasStr = JSON(params).rawString();
-       parasStr = parasStr?.replacingOccurrences(of: "\"{", with: "{").replacingOccurrences(of:"}\"" , with: "}");
-        let sigin = APP_ID + SUB_APP_ID + "{\n    \"password\" : \"111111\",\n    \"email\" : \"test3@test.com\"\n  },\n " + methodName  + VERSIONSTR + SHIPBAO_APP
+//       let  = params?.sorted(by: { $0.0 < $1.0 })
+        
+        
+//        var  parasStr = JSON(params).rawString();
+        
+        let json = ELJJSON.jsonString(params);
+        
+        
+        
+    
+
+//        json?.md5String
+        let sigin = APP_ID + SUB_APP_ID +  "\(json!)" + methodName  + VERSIONSTR + SHIPBAO_APP
         
         let siginStr  = sigin.md5String.uppercased();
         
-        var fixedParameters :[String : Any]   = ["sign":siginStr,"method":methodName,"data":params,"v":VERSIONSTR];
+        var fixedParameters :[String : Any]   = ["sign":siginStr,"method":methodName,"data":json!,"v":VERSIONSTR];
         
-        fixedParameters["token"] = "";
-      let decodePara =  JSON(fixedParameters).rawString();
-        return decodePara!;
+        
+        
+        
+//       let decodePara = "{\"v\":\"1.0\",\"method\":\"member_login\",\"data\":{\"password\":\"111111\",\"email\":\"test3@test.com\"},\"sign\":\"942B21548EDE53FFBB7C7C11A42691D9\"}"
+//        fixedParameters["token"] = "";
+        let decodePara =  ELJJSON.jsonString(fixedParameters);
+        
+    Alamofire.request(BASE_URL, method: .post, parameters: fixedParameters , encoding: URLEncoding.default , headers: nil).responseString { (resposeStr) in
+        
+        }
+        
+        
+        
+        return fixedParameters;
+        //return decodePara!;
     }
 }
 
