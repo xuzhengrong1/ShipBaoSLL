@@ -21,12 +21,12 @@ extension UIControl{
     }
     
     
-   static func ap_tabbar()   {
-      let tabbar  =   UITabBar.appearance()
-    tabbar.tintColor = UIColor.green //NavTintColor;
-    tabbar.unselectedItemTintColor = UIColor.red//TabbarTextColor
-//      tabbar.isTranslucent = false
-    }
+//   static func ap_tabbar()   {
+//      let tabbar  =   UITabBar.appearance()
+//    tabbar.tintColor = UIColor.green //NavTintColor;
+//    tabbar.unselectedItemTintColor = UIColor.red//TabbarTextColor
+////      tabbar.isTranslucent = false
+//    }
     
    
     

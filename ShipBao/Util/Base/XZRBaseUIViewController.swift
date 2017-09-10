@@ -15,19 +15,48 @@ import Foundation
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.white;
         if let count = self.navigationController?.viewControllers.count ,count > 1{
             
             self.navigationItem.leftBarButtonItem = navCustomBarButton("icon_back")
         }
-//        if (self.navigationController?.viewControllers.count)! > 1 {
-//            self.navigationItem.leftBarButtonItem = navCustomBarButton("icon_back")
-//        }
+
+        
         
     }
     
 
     
-   
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+    }
+    
+    //3.重写无参数初始化方法，自动调用xib文件
+    convenience init() {
+        
+        let nibNameOrNil = String(describing: type(of: self))
+        
+        //考虑到xib文件可能不存在或被删，故加入判断
+        if Bundle.main.path(forResource: nibNameOrNil, ofType: "nib") != nil
+        {
+            
+            self.init(nibName: nibNameOrNil, bundle: nil)
+            
+        }else{
+            
+            self.init(nibName: nil, bundle: nil)
+            
+            self.view.backgroundColor = UIColor.white
+            
+        }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     
     func navCustomBarButton(_ image:String = "icon_back", selector:Selector = #selector(backToDo), textColor: UIColor = UIColor.hexStringToUIColor(hex: "#303030")) -> UIBarButtonItem {
         let icon  = UIImage(named:image)?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)

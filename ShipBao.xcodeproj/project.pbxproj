@@ -101,6 +101,12 @@
 		967254AA1F653ADA001A876B /* XZRBaseTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967254A61F653ADA001A876B /* XZRBaseTableViewVC.swift */; };
 		967254AB1F653ADA001A876B /* XZRBaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967254A71F653ADA001A876B /* XZRBaseUIViewController.swift */; };
 		967254AD1F653B84001A876B /* EDMNavLeftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967254AC1F653B84001A876B /* EDMNavLeftButton.swift */; };
+		967254AF1F65409E001A876B /* ZRBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967254AE1F65409E001A876B /* ZRBaseView.swift */; };
+		967254B21F654699001A876B /* HomeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967254B11F654699001A876B /* HomeApi.swift */; };
+		967254B61F6553AA001A876B /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967254B31F6553AA001A876B /* List.swift */; };
+		967254B71F6553AA001A876B /* Warehousesdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967254B41F6553AA001A876B /* Warehousesdata.swift */; };
+		967254B81F6553AA001A876B /* Warehouseslist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967254B51F6553AA001A876B /* Warehouseslist.swift */; };
+		967254BA1F6553DD001A876B /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967254B91F6553DD001A876B /* OrderType.swift */; };
 		96E0CAAC1F5AB2250019CE0D /* CalculateFreightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */; };
 		D8E8A7931FFDB519204A7875 /* Pods_ShipBao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94923F4781EE92B1D676E595 /* Pods_ShipBao.framework */; };
 /* End PBXBuildFile section */
@@ -232,6 +238,12 @@
 		967254A61F653ADA001A876B /* XZRBaseTableViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZRBaseTableViewVC.swift; sourceTree = "<group>"; };
 		967254A71F653ADA001A876B /* XZRBaseUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZRBaseUIViewController.swift; sourceTree = "<group>"; };
 		967254AC1F653B84001A876B /* EDMNavLeftButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EDMNavLeftButton.swift; sourceTree = "<group>"; };
+		967254AE1F65409E001A876B /* ZRBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZRBaseView.swift; sourceTree = "<group>"; };
+		967254B11F654699001A876B /* HomeApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeApi.swift; sourceTree = "<group>"; };
+		967254B31F6553AA001A876B /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		967254B41F6553AA001A876B /* Warehousesdata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Warehousesdata.swift; sourceTree = "<group>"; };
+		967254B51F6553AA001A876B /* Warehouseslist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Warehouseslist.swift; sourceTree = "<group>"; };
+		967254B91F6553DD001A876B /* OrderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
 		96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculateFreightView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -408,6 +420,7 @@
 		966077CA1F4809950067006B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				967254B01F65468A001A876B /* Service */,
 				966077CB1F4809950067006B /* Model */,
 				966077CC1F4809950067006B /* View */,
 				966077CD1F4809950067006B /* ViewController */,
@@ -418,6 +431,10 @@
 		966077CB1F4809950067006B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				967254B31F6553AA001A876B /* List.swift */,
+				967254B91F6553DD001A876B /* OrderType.swift */,
+				967254B41F6553AA001A876B /* Warehousesdata.swift */,
+				967254B51F6553AA001A876B /* Warehouseslist.swift */,
 				965DA1601F642BE9009434FA /* Banner.swift */,
 				965DA1611F642BE9009434FA /* HomeDataList.swift */,
 				965DA1621F642BE9009434FA /* Tip.swift */,
@@ -777,8 +794,17 @@
 				967254A51F653ADA001A876B /* XZRBaseTableviewCell.swift */,
 				967254A61F653ADA001A876B /* XZRBaseTableViewVC.swift */,
 				967254A71F653ADA001A876B /* XZRBaseUIViewController.swift */,
+				967254AE1F65409E001A876B /* ZRBaseView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		967254B01F65468A001A876B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				967254B11F654699001A876B /* HomeApi.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		A2637024724AAB2C10623C2D /* Pods */ = {
@@ -861,6 +887,7 @@
 				TargetAttributes = {
 					96626A0A1F41F9FC00534C5A = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2EJFLZ42SY;
 						ProvisioningStyle = Automatic;
 					};
 					96626A1E1F41F9FC00534C5A = {
@@ -1002,6 +1029,7 @@
 				965DA1651F642BE9009434FA /* Tip.swift in Sources */,
 				96626A771F433C4E00534C5A /* RAMAnimatedTabBarController.swift in Sources */,
 				9600AED31F5062B1004A7002 /* DropDown.swift in Sources */,
+				967254B71F6553AA001A876B /* Warehousesdata.swift in Sources */,
 				967254AD1F653B84001A876B /* EDMNavLeftButton.swift in Sources */,
 				9660781D1F4842880067006B /* TRTabBarTransitionDelegate.swift in Sources */,
 				966078101F4842880067006B /* PageTransitionAnimation.swift in Sources */,
@@ -1011,6 +1039,7 @@
 				9660781C1F4842880067006B /* TRTabBarControllerDelegate.swift in Sources */,
 				966078201F4842880067006B /* TRStatusBarStyle.swift in Sources */,
 				966078231F4B0FA80067006B /* EDMBaseNavigationController.swift in Sources */,
+				967254B81F6553AA001A876B /* Warehouseslist.swift in Sources */,
 				967254A91F653ADA001A876B /* XZRBaseTableviewCell.swift in Sources */,
 				966077E01F4815D70067006B /* UIView+Init.swift in Sources */,
 				966077EC1F48321F0067006B /* UIViewController+MethodSwizzing.swift in Sources */,
@@ -1021,6 +1050,7 @@
 				9660781B1F4842880067006B /* UINavigationController+TRPushPop.swift in Sources */,
 				9660780A1F4842880067006B /* BlixtTransitionAnimation.swift in Sources */,
 				96626A421F41FDF000534C5A /* UIView+Extension.swift in Sources */,
+				967254BA1F6553DD001A876B /* OrderType.swift in Sources */,
 				967254AB1F653ADA001A876B /* XZRBaseUIViewController.swift in Sources */,
 				966078111F4842880067006B /* PopTipTransitionAnimation.swift in Sources */,
 				962B92531F4B28EE0077AFF9 /* EDMBaseTableviewCell.swift in Sources */,
@@ -1056,11 +1086,14 @@
 				9600AEE61F55B3CD004A7002 /* AccountViewController.swift in Sources */,
 				96626A761F433C4E00534C5A /* RAMTransitionItemAnimations.swift in Sources */,
 				966077E21F48175E0067006B /* UITableView+RegisterNib.swift in Sources */,
+				967254AF1F65409E001A876B /* ZRBaseView.swift in Sources */,
 				9660780E1F4842880067006B /* IBanTangTransitionAnimation.swift in Sources */,
+				967254B61F6553AA001A876B /* List.swift in Sources */,
 				9660780C1F4842880067006B /* ElevateTransitionAnimation.swift in Sources */,
 				965DA1591F62DBA1009434FA /* ELJJSON.m in Sources */,
 				9600AED21F5062B1004A7002 /* DropDown+Appearance.swift in Sources */,
 				9600AECF1F5062B1004A7002 /* DPDKeyboardListener.swift in Sources */,
+				967254B21F654699001A876B /* HomeApi.swift in Sources */,
 				966078191F4842880067006B /* UIViewController+TRPresent.swift in Sources */,
 				9600AECE1F5062B1004A7002 /* DPDConstants.swift in Sources */,
 				9600AEE21F55ABC9004A7002 /* identityPicCell.swift in Sources */,
@@ -1215,7 +1248,9 @@
 			baseConfigurationReference = 04554547D71FC2973975E132 /* Pods-ShipBao.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2EJFLZ42SY;
 				INFOPLIST_FILE = ShipBao/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coe.ShipBao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1229,7 +1264,9 @@
 			baseConfigurationReference = 658F3D1A907990E2B67DA0A8 /* Pods-ShipBao.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2EJFLZ42SY;
 				INFOPLIST_FILE = ShipBao/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coe.ShipBao;
 				PRODUCT_NAME = "$(TARGET_NAME)";

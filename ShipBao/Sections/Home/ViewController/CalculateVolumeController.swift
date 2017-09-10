@@ -8,41 +8,75 @@
 
 import Foundation
 import Material
-class CalculateVolumeController: UIViewController {
+import FTIndicator
+//import JKCategories
+
+class CalculateVolumeController: XZRBaseUIViewController {
+    @IBOutlet weak var houseLable: UILabel!
+    
+    @IBOutlet weak var widthTextField: UITextField!
+    @IBOutlet weak var heightField: UITextField!
+    @IBOutlet weak var longTextField: UITextField!
+    var nameArray:[String] = [];
     override func viewDidLoad() {
         super.viewDidLoad();
+        let tapGestrue = UITapGestureRecognizer(target: self, action: #selector(CalculateVolumeController.showMemu))
+        houseLable.isUserInteractionEnabled = true;
+        houseLable.addGestureRecognizer(tapGestrue)
     
-    
-//        view.layout(volView).top(40).left(20).right(20);
     }
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    
+    
+    @IBAction func comfirmAction(_ sender: UIButton) {
+        if let width = longTextField.text,width.characters.count <= 0 {
+            FTIndicator.showInfo(withMessage: "長度輸入不能為空")
+            return;
+        }
+        if let  width = widthTextField.text,width.characters.count <= 0 {
+            FTIndicator.showInfo(withMessage: "寬度輸入不能為空")
+            return
+        }
+        if let  height = heightField.text, height.characters.count <= 0 {
+            FTIndicator.showInfo(withMessage: "高度輸入不能為空")
+            return
+        }
         
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        XZRNetWorkTool.shared.calculateVolume(warehouseId:"", long:longTextField.text! , width: widthTextField.text!, height: heightField.text!) { (respose) in
+            
+        }
         
     }
     
-    //3.重写无参数初始化方法，自动调用xib文件
-    convenience init() {
-        
-        let nibNameOrNil = String(describing: type(of: self))
-        
-        //考虑到xib文件可能不存在或被删，故加入判断
-        if Bundle.main.path(forResource: nibNameOrNil, ofType: "nib") != nil
-        {
-            
-            self.init(nibName: nibNameOrNil, bundle: nil)
-            
-        }else{
-            
-            self.init(nibName: nil, bundle: nil)
-            
-            self.view.backgroundColor = UIColor.white
+    
+    func createMenuTable()  {
+        let sspop =  SSPopup();
+        self.view.addSubview(sspop)
+        sspop.createTableview(nameArray, withSender: self.houseLable, withTitle: "選擇倉庫地址") { ( index) in
             
         }
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+
+    func showMemu()  {
+        
+//        FTIndicator.showProgress(withMessage: "", userInteractionEnable: false)
+        if nameArray.count > 0 {
+        
+            self.createMenuTable();
+            
+        }else
+        {
+            XZRNetWorkTool.shared.loadWarehouses { (respose) in
+                let warehouseslists = respose?.warehouseslists
+                 self.nameArray =  (warehouseslists?.map{ $0.name! })!
+                self.createMenuTable()
+            }
+
+        }
+        
     }
+    
 }
+
+
+            

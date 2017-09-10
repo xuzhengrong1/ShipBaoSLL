@@ -125,34 +125,16 @@ extension XZRNetWorkTool {
     }
     
     func formartParameters(params:[String: String]? = nil ,methodName : String = "", userToken: Bool) -> [String : Any] {
-    
-//       let  = params?.sorted(by: { $0.0 < $1.0 })
-        
-        
-//        var  parasStr = JSON(params).rawString();
-        
         let json = ELJJSON.jsonString(params);
-        
-        
-        
-    
 
-//        json?.md5String
         let sigin = APP_ID + SUB_APP_ID +  "\(json!)" + methodName  + VERSIONSTR + SHIPBAO_APP
         
         let siginStr  = sigin.md5String.uppercased();
         
-        let fixedParameters :[String : Any]   = ["sign":siginStr,"method":methodName,"data":json!,"v":VERSIONSTR];
-        
-        
-        
-        
-//       let decodePara = "{\"v\":\"1.0\",\"method\":\"member_login\",\"data\":{\"password\":\"111111\",\"email\":\"test3@test.com\"},\"sign\":\"942B21548EDE53FFBB7C7C11A42691D9\"}"
-//        fixedParameters["token"] = "";
-//        let decodePara =  ELJJSON.jsonString(fixedParameters);
-        
-    
-        
+        var fixedParameters :[String : Any]   = ["sign":siginStr,"method":methodName,"data":json!,"v":VERSIONSTR];
+        if let token = Defaults[.usertoken],  token.characters.count > 0 {
+            fixedParameters["token"] = token
+        }
         return fixedParameters;
         //return decodePara!;
     }
@@ -164,9 +146,6 @@ extension XZRNetWorkTool {
         
         let params =  [ "email" : userName ,"password":passworld ];
         XZRNetWorkTool.shared.postRequest(methodName:"member_login", params: params) { (response, error) in
-            
-//            Defaults[.]
-            
             if let responseStr = response?["data"].rawString()  {
                 Defaults[.usertoken] = response?["token"].rawString()
                 let  homeDataList  = HomeDataList(JSONString: responseStr);

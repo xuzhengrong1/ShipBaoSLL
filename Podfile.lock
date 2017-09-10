@@ -8,6 +8,7 @@ PODS:
   - FTIndicator/FTNotificationIndicator (1.2.4)
   - FTIndicator/FTProgressIndicator (1.2.4)
   - FTIndicator/FTToastIndicator (1.2.4)
+  - JKCategories (1.5)
   - Kingfisher (3.10.4)
   - Material (2.10.1):
     - Material/Core (= 2.10.1)
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - Alamofire
   - FSPagerView
   - FTIndicator
+  - JKCategories
   - Kingfisher (~> 3.10.4)
   - Material (~> 2.0)
   - ObjectMapper
@@ -36,6 +38,7 @@ SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   FSPagerView: 3ec72e6b201d77a48adab5ed1d33b43a8cc153d6
   FTIndicator: 4fdfc354d6e364420fcce593ee733cfa60ad7d4c
+  JKCategories: 863f4c7ed2d521ee6bf72ceea97948da23bb5af4
   Kingfisher: dc3a4983e86d2dfa89513664983a82340c11a289
   Material: b938cbdb70109a1a9eae9feb87f27f68cf998d52
   ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
@@ -45,6 +48,6 @@ SPEC CHECKSUMS:
   YNExpandableCell: 47bf7cff721aa535c0e9e1163bf22b5573441bb4
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: dc5846a772bbcfc7f169090b553935bc00152b3f
+PODFILE CHECKSUM: 53be025bf72ccc6acdd0f0cfbf3324a496fd5c69
 
 COCOAPODS: 1.2.0

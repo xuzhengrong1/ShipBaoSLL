@@ -55,7 +55,7 @@ let dic =  cellData[indexPath.section][indexPath.row];
 //        navigationController?.tr_pushViewController(vc, method: TRPushTransitionMethod.page)
 //        navigationController?.tr_pushViewController(sendVc, method: <#T##TransitionAnimationable#>)
         
-        navigationController?.pushViewController(CalculateVolumeController(), animated: true)
+        navigationController?.pushViewController(sendVc.init(), animated: true)
 //        navigationController?.pushViewController(sendVc.init(), animated: true);
         
 //         =cellData[indexPath.section];
