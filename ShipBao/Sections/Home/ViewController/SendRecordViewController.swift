@@ -15,8 +15,6 @@ class SendRecordViewController: ButtonBarPagerTabStripViewController,NavgationTr
     var tr_pushTransition: TRNavgationTransitionDelegate?
    
     override func viewDidLoad() {
-        
-        self.title = "1111";
         settings.style.buttonBarItemBackgroundColor = .clear
         settings.style.buttonBarMinimumLineSpacing = 5
         

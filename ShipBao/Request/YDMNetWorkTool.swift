@@ -1,5 +1,5 @@
 //
-//  YDMNetWorkTool.swift
+//  XZRNetWorkTool.swift
 //  YDMShop
 //
 //  Created by Xuzhengrong on 2017/2/7.
@@ -11,9 +11,11 @@ import Alamofire
 import ObjectMapper
 import SwiftyJSON
 import YYModel
+import FTIndicator
+import SwiftyUserDefaults
 
 
-public class  YDMNetWorkTool : NSObject
+public class  XZRNetWorkTool : NSObject
 {
     public var sessionManager: SessionManager;
     public var token : String? {
@@ -22,7 +24,7 @@ public class  YDMNetWorkTool : NSObject
         
     }
     
-    public static let shared = YDMNetWorkTool();
+    public static let shared = XZRNetWorkTool();
     
     
     override init() {
@@ -45,7 +47,7 @@ public class  YDMNetWorkTool : NSObject
 
 
 import Foundation
-extension YDMNetWorkTool {
+extension XZRNetWorkTool {
     /// 发送POST请求
     func request(urlString :  String,method: String, params : [String : String]?, completionHandler : @escaping (_ responseObject : JSON?,_ error: NSError?)->() ) {
     
@@ -55,24 +57,38 @@ extension YDMNetWorkTool {
             urlRequest.httpMethod = method
             do {
                 let paramst = "";
-                let requestStr  = self.formartParameters(params: params, methodName: urlString ,userToken: true);
-//                if  requestStr.characters.count > 0 {
-                let data = try? JSONSerialization.data(withJSONObject: requestStr, options: [])
-//                     let data = requestStr.data(using: .utf8);
-                    urlRequest.httpBody = data
-                    urlRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+                let requestDic  = self.formartParameters(params: params, methodName: urlString ,userToken: true);
                 
-                    Alamofire.request(urlRequest).responseJSON{
-                        response in
-                        switch response.result {
-                        case .success(let value):
-                            let json = JSON(value)
-                            print("JSON: \(json)")
-                            completionHandler(json ,nil)
-                        case .failure:
-                            completionHandler(nil,response.result.error! as NSError)
-                            print("网络加载失败")
-                        }};
+                
+                Alamofire.request(BASE_URL, method: .post, parameters: requestDic , encoding: URLEncoding.default , headers: nil).responseJSON{
+                    response in
+                    switch response.result {
+                    case .success(let value):
+                        let json = JSON(value)
+                        print("JSON: \(json)")
+                        completionHandler(json ,nil)
+                    case .failure:
+                        completionHandler(nil,response.result.error! as NSError)
+                        print("网络加载失败")
+                    }};
+                
+//                if  requestStr.characters.count > 0 {
+//                let data = try? JSONSerialization.data(withJSONObject: requestStr, options: [])
+////                     let data = requestStr.data(using: .utf8);
+//                    urlRequest.httpBody = data
+//                    urlRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+//                
+//                    Alamofire.request(urlRequest).responseJSON{
+//                        response in
+//                        switch response.result {
+//                        case .success(let value):
+//                            let json = JSON(value)
+//                            print("JSON: \(json)")
+//                            completionHandler(json ,nil)
+//                        case .failure:
+//                            completionHandler(nil,response.result.error! as NSError)
+//                            print("网络加载失败")
+//                        }};
 //                }
             } catch {
                 
@@ -82,8 +98,26 @@ extension YDMNetWorkTool {
         
     }
     
-    func postRequest(urlString : String, params :  [String : String]?, completionHandler : @escaping (_ responseObject : JSON?,_ error: NSError?)->() ) {
-            self.request(urlString: urlString, method: "POST",params: params, completionHandler: completionHandler)
+    func postRequest(methodName : String, params :  [String : String]?, completionHandler : @escaping (_ responseObject : JSON?,_ error: NSError?)->() ) {
+        let requestDic  = self.formartParameters(params: params, methodName: methodName ,userToken: true);
+        Alamofire.request(BASE_URL, method: .post, parameters: requestDic , encoding: URLEncoding.default , headers: nil).responseJSON{
+            response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                let status  = json["status"].int ;
+                if status == 1{
+                    completionHandler(json ,nil)
+                }else{
+                    let msg  = json["msg"].rawString()
+                    FTIndicator.showError(withMessage:msg);
+                }
+                print("JSON: \(json)")
+                
+            case .failure:
+                completionHandler(nil,response.result.error! as NSError)
+                print("网络加载失败")
+            }};
     }
     
     func getRequest(urlString : String, params : [String :String],  completionHandler : @escaping (_ responseObject : JSON?,_ error: NSError?)->() ) {
@@ -108,20 +142,16 @@ extension YDMNetWorkTool {
         
         let siginStr  = sigin.md5String.uppercased();
         
-        var fixedParameters :[String : Any]   = ["sign":siginStr,"method":methodName,"data":json!,"v":VERSIONSTR];
+        let fixedParameters :[String : Any]   = ["sign":siginStr,"method":methodName,"data":json!,"v":VERSIONSTR];
         
         
         
         
 //       let decodePara = "{\"v\":\"1.0\",\"method\":\"member_login\",\"data\":{\"password\":\"111111\",\"email\":\"test3@test.com\"},\"sign\":\"942B21548EDE53FFBB7C7C11A42691D9\"}"
 //        fixedParameters["token"] = "";
-        let decodePara =  ELJJSON.jsonString(fixedParameters);
+//        let decodePara =  ELJJSON.jsonString(fixedParameters);
         
-    Alamofire.request(BASE_URL, method: .post, parameters: fixedParameters , encoding: URLEncoding.default , headers: nil).responseString { (resposeStr) in
-        
-        }
-        
-        
+    
         
         return fixedParameters;
         //return decodePara!;
@@ -129,17 +159,20 @@ extension YDMNetWorkTool {
 }
 
 
-extension YDMNetWorkTool {
-    func userlogin(username userName:String, passworld:String, finished:@escaping (_ loginMoel: JSON?)->()) {
-      
+extension XZRNetWorkTool {
+    func userlogin(username userName:String, passworld:String, finished:@escaping (_ homData: HomeDataList?)->()) {
         
-        let params =  [ "mobile" : userName ,"passwd":passworld ];
-        YDMNetWorkTool.shared.postRequest(urlString: "/user/login", params: params) { (response, error) in
-            if error != nil {
-               finished(nil)
-            }else
-            {
-                finished(response)
+        let params =  [ "email" : userName ,"password":passworld ];
+        XZRNetWorkTool.shared.postRequest(methodName:"member_login", params: params) { (response, error) in
+            
+//            Defaults[.]
+            
+            if let responseStr = response?["data"].rawString()  {
+                Defaults[.usertoken] = response?["token"].rawString()
+                let  homeDataList  = HomeDataList(JSONString: responseStr);
+                Defaults[.homeDataList] = homeDataList;
+                
+                finished(homeDataList);
             }
         }
 

@@ -11,6 +11,8 @@ target 'ShipBao'  do
     pod 'FTIndicator'
     pod  'SwiftyJSON'
     pod 'YYModel'
+    pod 'SwiftyUserDefaults'
+    pod 'FSPagerView'
 #    pod 'TransitionTreasury', '~> 4.0.0'
 #    pod 'RAMAnimatedTabBarController', '~> 2.0.13'
 end

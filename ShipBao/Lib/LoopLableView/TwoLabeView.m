@@ -8,6 +8,8 @@
 
 #import "TwoLabeView.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 @implementation TwoLabeView
 
 -(instancetype)initWithFrame:(CGRect)frame{
@@ -26,6 +28,7 @@
     
     CGFloat totalHeight = self.frame.size.height;
     self.lab1.frame = CGRectMake(0, 0 , self.frame.size.width, totalHeight);
+    self.lab1.textColor = UIColorFromRGB(0x56bc7b);
 //    self.lab2.frame = CGRectMake(0, CGRectGetMaxY(self.lab1.frame), self.frame.size.width, totalHeight/2);
     [self addSubview:self.lab1];
 //    [self addSubview:self.lab2];

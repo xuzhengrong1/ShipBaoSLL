@@ -21,6 +21,8 @@ class LoginViewController: UIViewController {
         prepareAccoutField()
         preparePasswordField()
         view.backgroundColor = COLORLIKEGREEN
+        accoutField.text = "test3@test.com"
+        passwordField.text = "111111"
 //        headImageView.image =  //Icon.cm.photoCamera
         
     }
@@ -43,7 +45,17 @@ class LoginViewController: UIViewController {
             FTIndicator.showToastMessage("密碼不能為空！")
             return;
         }
-        YDMNetWorkTool.shared.postRequest(urlString: "member_login", params: ["email":"test3@test.com","password":"111111"]) { (response, error) in
+        
+        XZRNetWorkTool.shared.userlogin(username: accoutField.text!, passworld: passwordField.text!) { (respose) in
+            FTIndicator.showSuccess(withMessage: "登陆成功")
+            
+//            let homeDataList = respose;
+        
+            let tabbar =  getControllerFromStoryBoard("Main", identity: "RAMAnimatedTabBarController")
+            self.view.window?.rootViewController = tabbar
+            
+            
+            
             
         }
     }

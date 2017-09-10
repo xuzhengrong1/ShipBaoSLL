@@ -15,24 +15,18 @@
             <rect key="frame" x="0.0" y="0.0" width="381" height="326"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jh-uH-3Fj">
-                    <rect key="frame" x="0.0" y="0.0" width="381" height="168"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="168" id="TR3-gE-kPn"/>
-                    </constraints>
-                </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQ8-p8-K2C">
                     <rect key="frame" x="0.0" y="168" width="381" height="48"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_home_toutiao" translatesAutoresizingMaskIntoConstraints="NO" id="Bmh-qK-yaP">
-                            <rect key="frame" x="10" y="11.5" width="74" height="25"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_home_tips" translatesAutoresizingMaskIntoConstraints="NO" id="Bmh-qK-yaP">
+                            <rect key="frame" x="10" y="12" width="35" height="24"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="25" id="W4W-hr-xdq"/>
-                                <constraint firstAttribute="width" constant="74" id="XZ0-1C-9o9"/>
+                                <constraint firstAttribute="height" constant="24" id="W4W-hr-xdq"/>
+                                <constraint firstAttribute="width" constant="35" id="XZ0-1C-9o9"/>
                             </constraints>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SAC-ip-2gZ">
-                            <rect key="frame" x="92" y="8" width="281" height="32"/>
+                            <rect key="frame" x="53" y="8" width="320" height="32"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                     </subviews>
@@ -48,29 +42,29 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qhn-w8-5F9">
-                    <rect key="frame" x="0.0" y="216" width="381" height="110"/>
+                    <rect key="frame" x="0.0" y="216" width="381" height="100"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aC-Oe-gUD">
-                            <rect key="frame" x="126.5" y="0.0" width="127.5" height="110"/>
-                            <color key="backgroundColor" red="0.96862745100000003" green="0.43137254899999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <state key="normal" title="海外倉庫">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aC-Oe-gUD" customClass="ZRButton" customModule="ShipBao" customModuleProvider="target">
+                            <rect key="frame" x="127" y="0.0" width="127" height="100"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="海外倉庫" image="icon_home_packet">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ5-Ol-CLb">
-                            <rect key="frame" x="254" y="0.0" width="127" height="110"/>
-                            <color key="backgroundColor" red="0.96862745100000003" green="0.43137254899999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <state key="normal" title="海外倉庫">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ5-Ol-CLb" customClass="ZRButton" customModule="ShipBao" customModuleProvider="target">
+                            <rect key="frame" x="254" y="0.0" width="127" height="100"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="包裹狀態" image="icon_home_car">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXt-g1-KOJ">
-                            <rect key="frame" x="0.0" y="0.0" width="126.5" height="110"/>
-                            <color key="backgroundColor" red="0.96862745100000003" green="0.43137254899999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <state key="normal" title="海外倉庫">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXt-g1-KOJ" customClass="ZRButton" customModule="ShipBao" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="127" height="100"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="海外倉庫" image="icon_home_store">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
                         </button>
@@ -91,29 +85,50 @@
                         <constraint firstItem="XQ5-Ol-CLb" firstAttribute="leading" secondItem="7aC-Oe-gUD" secondAttribute="trailing" id="jeq-Rr-sX0"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Usp-qz-Iip" customClass="FSPagerView" customModule="FSPagerView">
+                    <rect key="frame" x="0.0" y="0.0" width="381" height="168"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="168" id="zoQ-P4-yJd"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3NK-7a-srB" customClass="FSPageControl" customModule="FSPagerView">
+                    <rect key="frame" x="0.0" y="143" width="381" height="25"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="d3G-2i-Zw4"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="AQ8-p8-K2C" firstAttribute="top" secondItem="4jh-uH-3Fj" secondAttribute="bottom" id="3sX-Ku-Ggi"/>
-                <constraint firstItem="4jh-uH-3Fj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5Td-dH-iiH"/>
+                <constraint firstAttribute="trailing" secondItem="3NK-7a-srB" secondAttribute="trailing" id="1rN-sP-xNb"/>
                 <constraint firstAttribute="trailing" secondItem="AQ8-p8-K2C" secondAttribute="trailing" id="7Ql-sT-0PY"/>
-                <constraint firstItem="4jh-uH-3Fj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="I3q-JU-YPQ"/>
                 <constraint firstAttribute="trailing" secondItem="Qhn-w8-5F9" secondAttribute="trailing" id="M31-uP-eMh"/>
-                <constraint firstAttribute="trailing" secondItem="4jh-uH-3Fj" secondAttribute="trailing" id="Ouw-3Q-r3K"/>
-                <constraint firstAttribute="bottom" secondItem="Qhn-w8-5F9" secondAttribute="bottom" id="XPR-1a-53W"/>
+                <constraint firstItem="3NK-7a-srB" firstAttribute="bottom" secondItem="Usp-qz-Iip" secondAttribute="bottom" id="O9x-J5-ggp"/>
+                <constraint firstItem="AQ8-p8-K2C" firstAttribute="top" secondItem="Usp-qz-Iip" secondAttribute="bottom" id="SDM-DV-2VD"/>
+                <constraint firstAttribute="bottom" secondItem="Qhn-w8-5F9" secondAttribute="bottom" constant="10" id="XPR-1a-53W"/>
+                <constraint firstItem="Usp-qz-Iip" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ahk-8z-D5z"/>
+                <constraint firstAttribute="trailing" secondItem="Usp-qz-Iip" secondAttribute="trailing" id="fSM-Qh-LVN"/>
+                <constraint firstItem="3NK-7a-srB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gXq-Cu-fc9"/>
                 <constraint firstItem="Qhn-w8-5F9" firstAttribute="top" secondItem="AQ8-p8-K2C" secondAttribute="bottom" id="gba-8f-iuC"/>
                 <constraint firstItem="AQ8-p8-K2C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kJm-oI-X1P"/>
+                <constraint firstItem="Usp-qz-Iip" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wnd-RS-ePT"/>
                 <constraint firstItem="Qhn-w8-5F9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xL9-SK-pz5"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="homeBannerPageControl" destination="3NK-7a-srB" id="Bq3-1P-rVw"/>
+                <outlet property="homeHeadBanner" destination="Usp-qz-Iip" id="9vy-6T-djT"/>
                 <outlet property="marqueeView" destination="SAC-ip-2gZ" id="R5M-Tr-9Wr"/>
-                <outlet property="ssCyleBanner" destination="4jh-uH-3Fj" id="JzY-r4-24Q"/>
             </connections>
-            <point key="canvasLocation" x="125.5" y="-121"/>
+            <point key="canvasLocation" x="-14.5" y="-209"/>
         </view>
     </objects>
     <resources>
-        <image name="icon_home_toutiao" width="76" height="25"/>
+        <image name="icon_home_car" width="120" height="80"/>
+        <image name="icon_home_packet" width="120" height="80"/>
+        <image name="icon_home_store" width="120" height="80"/>
+        <image name="icon_home_tips" width="34" height="24"/>
     </resources>
 </document>

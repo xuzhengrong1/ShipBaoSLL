@@ -13,32 +13,50 @@ import UIKit
 class HomeViewController:UITableViewController {
     
     var headerView:HomeHeaderView! = nil;
-    var cellData:[[String : String]] = [[String : String]()]
+    var cellData:[[[String : String]]] = [[[String : String]()]]
     override func viewDidLoad() {
     super.viewDidLoad()
+        cellData = [[[kCellViewController:String(describing: SendRecordViewController.self)]],
+                    [
+            [kCellViewController:"SendRecordViewController"],[kCellViewController:String(describing: CalculateVolumeController.self)],
+            [kCellViewController:"SendRecordViewController"],
+                                                                        ],
+                    [
+                        [kCellViewController:"SendRecordViewController"]
+                        ]
         
-        cellData = [[kCellViewController:"SendRecordViewController"]]
+        ]
         headerView = HomeHeaderView.loadFromNibNamed() as! HomeHeaderView
+        
         headerView.autoresizingMask = .flexibleWidth
         self.tableView.tableHeaderView = headerView;
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        self.navigationController?.navigationBar.isHidden = true;
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false;
     }
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-   let sendVc =      stringClassFromString("SendRecordViewController") as! SendRecordViewController.Type;
         
-//        sendVc
-    let vc = sendVc.init() 
+let dic =  cellData[indexPath.section][indexPath.row];
+   let sendVc =      stringClassFromString(dic[kCellViewController]!) as! UIViewController.Type;
         
-//        navigationController?.tr_pushViewController(vc, method: TRPushTransitionMethod.page)
+//      navigationController?.tr_pushViewController(vc, method: TRPushTransitionMethod.page)
         
         
 //        navigationController?.tr_pushViewController(vc, method: TRPushTransitionMethod.page)
 //        navigationController?.tr_pushViewController(sendVc, method: <#T##TransitionAnimationable#>)
         
-        
-        navigationController?.pushViewController(sendVc.init(), animated: true);
+        navigationController?.pushViewController(CalculateVolumeController(), animated: true)
+//        navigationController?.pushViewController(sendVc.init(), animated: true);
         
 //         =cellData[indexPath.section];
         

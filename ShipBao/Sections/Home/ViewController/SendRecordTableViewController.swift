@@ -61,7 +61,7 @@ class SendRecordTableViewController: UITableViewController, IndicatorInfoProvide
 //
 //
 //    func getCollegeData(_ page: Int) {
-//        YDMNetWorkTool.shared.getCollegeData(page: page ,category: self.tabType, {articles in
+//        XZRNetWorkTool.shared.getCollegeData(page: page ,category: self.tabType, {articles in
 //            if articles != nil {
 //                
 //                if let count  = (articles?.articlelist?.count), count < 10 {
@@ -97,7 +97,7 @@ class SendRecordTableViewController: UITableViewController, IndicatorInfoProvide
 //    }
 //    
 //    func getCourseData(_ page: Int,_ isThisWeek :Int) {
-//        YDMNetWorkTool.shared.getCourseData(page: page ,isThisWeek: isThisWeek ,{courseList in
+//        XZRNetWorkTool.shared.getCourseData(page: page ,isThisWeek: isThisWeek ,{courseList in
 //            if courseList != nil {
 //                
 //                if let count  = (courseList?.list?.count), count < 10 {
@@ -141,7 +141,7 @@ class SendRecordTableViewController: UITableViewController, IndicatorInfoProvide
 //        }
 //    }
 //    func requstBannerData(){
-//        YDMNetWorkTool.shared.getBannerData(category: self.tabType ,{ banners  in
+//        XZRNetWorkTool.shared.getBannerData(category: self.tabType ,{ banners  in
 //            if banners != nil && banners?.list != nil {
 //                self.banners = (banners?.list)!
 //                var urls :[Any] = []

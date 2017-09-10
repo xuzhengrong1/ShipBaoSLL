@@ -1,44 +1,50 @@
 PODS:
   - Alamofire (4.5.1)
-  - FTIndicator (1.2.2):
-    - FTIndicator/FTNotificationIndicator (= 1.2.2)
-    - FTIndicator/FTProgressIndicator (= 1.2.2)
-    - FTIndicator/FTToastIndicator (= 1.2.2)
-  - FTIndicator/FTNotificationIndicator (1.2.2)
-  - FTIndicator/FTProgressIndicator (1.2.2)
-  - FTIndicator/FTToastIndicator (1.2.2)
+  - FSPagerView (0.5.5)
+  - FTIndicator (1.2.4):
+    - FTIndicator/FTNotificationIndicator (= 1.2.4)
+    - FTIndicator/FTProgressIndicator (= 1.2.4)
+    - FTIndicator/FTToastIndicator (= 1.2.4)
+  - FTIndicator/FTNotificationIndicator (1.2.4)
+  - FTIndicator/FTProgressIndicator (1.2.4)
+  - FTIndicator/FTToastIndicator (1.2.4)
   - Kingfisher (3.10.4)
-  - Material (2.9.4):
-    - Material/Core (= 2.9.4)
-  - Material/Core (2.9.4)
+  - Material (2.10.1):
+    - Material/Core (= 2.10.1)
+  - Material/Core (2.10.1)
   - ObjectMapper (2.2.8)
   - SwiftyJSON (3.1.4)
+  - SwiftyUserDefaults (3.0.0)
   - XLPagerTabStrip (7.0.0)
   - YNExpandableCell (1.1.0)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
   - Alamofire
+  - FSPagerView
   - FTIndicator
   - Kingfisher (~> 3.10.4)
   - Material (~> 2.0)
   - ObjectMapper
   - SwiftyJSON
+  - SwiftyUserDefaults
   - XLPagerTabStrip
   - YNExpandableCell
   - YYModel
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  FTIndicator: 6224eaa05acca50535aec791a33340525503618b
+  FSPagerView: 3ec72e6b201d77a48adab5ed1d33b43a8cc153d6
+  FTIndicator: 4fdfc354d6e364420fcce593ee733cfa60ad7d4c
   Kingfisher: dc3a4983e86d2dfa89513664983a82340c11a289
-  Material: 06fa0a5f29c45c42608ae32f3be96f1c46558d13
+  Material: b938cbdb70109a1a9eae9feb87f27f68cf998d52
   ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
   YNExpandableCell: 47bf7cff721aa535c0e9e1163bf22b5573441bb4
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 3d18c55adfd1a2cfac358ef049d9f1acb6c9e505
+PODFILE CHECKSUM: dc5846a772bbcfc7f169090b553935bc00152b3f
 
 COCOAPODS: 1.2.0
