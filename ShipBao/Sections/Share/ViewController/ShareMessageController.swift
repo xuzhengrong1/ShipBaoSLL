@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class ShareMessageController: UITableViewController,SSPopupDelegate {
+class ShareMessageController: XZRBaseTableViewVC,SSPopupDelegate {
     let dropDown = DropDown()
     var  navButton:XZRNavButton!
     override func viewDidLoad() {
@@ -61,7 +61,7 @@ class ShareMessageController: UITableViewController,SSPopupDelegate {
         tableView .deselectRow(at: indexPath, animated: false)
     }
     
-    open func  registerCell(_ identifier: String)
+    open override func  registerCell(_ identifier: String)
     {
         self.tableView.register(UINib(nibName: identifier, bundle: nil), forCellReuseIdentifier: identifier)
     }

@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import ObjectMapper
 import SwiftyJSON
-import YYModel
+//import YYModel
 import FTIndicator
 import SwiftyUserDefaults
 
@@ -58,8 +58,6 @@ extension XZRNetWorkTool {
             do {
                 let paramst = "";
                 let requestDic  = self.formartParameters(params: params, methodName: urlString ,userToken: true);
-                
-                
                 Alamofire.request(BASE_URL, method: .post, parameters: requestDic , encoding: URLEncoding.default , headers: nil).responseJSON{
                     response in
                     switch response.result {
@@ -133,7 +131,9 @@ extension XZRNetWorkTool {
         
         var fixedParameters :[String : Any]   = ["sign":siginStr,"method":methodName,"data":json!,"v":VERSIONSTR];
         if let token = Defaults[.usertoken],  token.characters.count > 0 {
-            fixedParameters["token"] = token
+            if methodName != "member_login" {
+                fixedParameters["token"] = token
+            }
         }
         return fixedParameters;
         //return decodePara!;

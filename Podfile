@@ -10,10 +10,10 @@ target 'ShipBao'  do
     pod 'Material', '~> 2.0'
     pod 'FTIndicator'
     pod  'SwiftyJSON'
-    pod 'YYModel'
+#    pod 'YYModel'
     pod 'SwiftyUserDefaults'
     pod 'FSPagerView'
-    pod 'JKCategories'
+#    pod 'JKCategories'
 #    pod 'TransitionTreasury', '~> 4.0.0'
 #    pod 'RAMAnimatedTabBarController', '~> 2.0.13'
 end

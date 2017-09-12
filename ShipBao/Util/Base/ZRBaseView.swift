@@ -8,14 +8,14 @@
 
 import Foundation
 import Material
-class ZRBaseView: View{
+class ZRBaseView: UIView{
     override func awakeFromNib() {
-        super.awakeFromNib();
-        self.shadowOffset = CGSize(width: 2, height: 2)
-        self.shadowRadius = 4;
-        self.shadowOpacity = 1;
-        self.shadowColor = UIColor.lightGray
-        self.isShadowPathAutoSizing = true;
+//        super.awakeFromNib();
+//        self.shadowOffset = CGSize(width: 2, height: 2)
+//        self.shadowRadius = 4;
+//        self.shadowOpacity = 1;
+//        self.shadowColor = UIColor.lightGray
+//        self.isShadowPathAutoSizing = true;
     
 //        self.isShadowPathAutoSizing =
     }
