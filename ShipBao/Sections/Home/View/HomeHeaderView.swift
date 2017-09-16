@@ -15,7 +15,7 @@ import Kingfisher
 class HomeHeaderView: UIView,FSPagerViewDataSource,FSPagerViewDelegate {
     
     
-    var  marquee: UIVerticalLoopView? = nil ;
+    var  marquee: CCPScrollView? = nil ;
     var bannerData:[Banner]? = Defaults[.homeDataList]?.banners;
     var tipsData:[Tip]? = Defaults[.homeDataList]?.tips;
     
@@ -30,7 +30,7 @@ class HomeHeaderView: UIView,FSPagerViewDataSource,FSPagerViewDelegate {
         }
     }
     
-    @IBOutlet weak var marqueeView: UIView!
+    @IBOutlet weak var marqueeView: CCPScrollView!
     
     @IBOutlet weak var homeBannerPageControl: FSPageControl! {
         didSet {
@@ -47,15 +47,18 @@ class HomeHeaderView: UIView,FSPagerViewDataSource,FSPagerViewDelegate {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        marquee = UIVerticalLoopView(frame: CGRect(x: 0, y: 0, width: self.marqueeView.width, height: self.marqueeView.height))
-        marquee?.direction = VerticalLoopDirectionDown;
+        marquee = CCPScrollView(frame: CGRect(x: 0, y: 0, width: self.marqueeView.width, height: self.marqueeView.height))
+//        marquee?.direction = VerticalLoopDirectionDown;
         
-        var tipArr:[[String]] = [[]];
+        var tipArr:[String] = [];
         for tip in tipsData! {
-            tipArr.append([tip.content!])
+            tipArr.append(tip.content!)
         }
-        marquee?.verticalLoopContentArr = tipArr;
-        marquee?.start();
+        marquee?.titleArray = tipArr;
+        marquee?.titleFont = 15;
+        marquee?.titleColor = COLORLIKEGREEN;
+        marquee?.textAlignment = .left;
+//        marquee?.start();
         self.marqueeView.addSubview(marquee!)
         
         

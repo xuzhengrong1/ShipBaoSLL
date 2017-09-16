@@ -38,6 +38,7 @@
 		965DA1641F642BE9009434FA /* HomeDataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965DA1611F642BE9009434FA /* HomeDataList.swift */; };
 		965DA1651F642BE9009434FA /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965DA1621F642BE9009434FA /* Tip.swift */; };
 		965DA1671F65148A009434FA /* ZRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965DA1661F65148A009434FA /* ZRButton.swift */; };
+		965DA6431F6980DF00D607E4 /* CCPScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 965DA6421F6980DF00D607E4 /* CCPScrollView.m */; };
 		966077D71F4809CB0067006B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966077D61F4809CB0067006B /* HomeViewController.swift */; };
 		966077DC1F480C6E0067006B /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966077DA1F480C6E0067006B /* HomeHeaderView.swift */; };
 		966077DD1F480C6E0067006B /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966077DB1F480C6E0067006B /* HomeHeaderView.xib */; };
@@ -166,6 +167,8 @@
 		965DA1611F642BE9009434FA /* HomeDataList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataList.swift; sourceTree = "<group>"; };
 		965DA1621F642BE9009434FA /* Tip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		965DA1661F65148A009434FA /* ZRButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZRButton.swift; sourceTree = "<group>"; };
+		965DA6411F6980DF00D607E4 /* CCPScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPScrollView.h; sourceTree = "<group>"; };
+		965DA6421F6980DF00D607E4 /* CCPScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPScrollView.m; sourceTree = "<group>"; };
 		966077D61F4809CB0067006B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		966077DA1F480C6E0067006B /* HomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		966077DB1F480C6E0067006B /* HomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
@@ -682,6 +685,8 @@
 		96626A611F433C4E00534C5A /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				965DA6411F6980DF00D607E4 /* CCPScrollView.h */,
+				965DA6421F6980DF00D607E4 /* CCPScrollView.m */,
 				965DA1571F62DBA1009434FA /* ELJJSON.h */,
 				965DA1581F62DBA1009434FA /* ELJJSON.m */,
 				9600AECC1F5062B1004A7002 /* DropDown */,
@@ -1033,6 +1038,7 @@
 				967254AD1F653B84001A876B /* EDMNavLeftButton.swift in Sources */,
 				9660781D1F4842880067006B /* TRTabBarTransitionDelegate.swift in Sources */,
 				966078101F4842880067006B /* PageTransitionAnimation.swift in Sources */,
+				965DA6431F6980DF00D607E4 /* CCPScrollView.m in Sources */,
 				96626A111F41F9FC00534C5A /* ViewController.swift in Sources */,
 				96626A721F433C4E00534C5A /* RAMBounceAnimation.swift in Sources */,
 				966077D71F4809CB0067006B /* HomeViewController.swift in Sources */,

@@ -15,4 +15,5 @@
 #import "UIVerticalLoopView.h"
 #import "SSPopup.h"
 #import "ELJJSON.h"
+#import "CCPScrollView.h"
 //#import "FTIndicator.h"
