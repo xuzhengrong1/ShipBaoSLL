@@ -24,6 +24,8 @@ extension XZRNetWorkTool{
     
     
     
+    
+    
     func calculateVolume(warehouseId:String,long:String,width:String,height:String,finished:@escaping (_ json: JSON?)->()) -> () {
         let params =  [ "warehouse_id" : warehouseId,"long" : long,"width" : width,"height" : height];
     

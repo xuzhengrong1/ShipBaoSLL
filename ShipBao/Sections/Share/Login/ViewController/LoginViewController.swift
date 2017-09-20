@@ -28,6 +28,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func registerAction(_ sender: Any) {
+        let vc =   getControllerFromStoryBoard(AccountStoryBoard, identity:String(describing: RegisterViewController.self))
+        self.navigationController?.pushViewController(vc, animated: true);
     }
     
 
@@ -60,6 +62,15 @@ class LoginViewController: UIViewController {
         }
     }
 
+    
+   // @IBAction func registerAction(_ sender: UIButton) {
+    //}
+    @IBAction func forgetPassworld(_ sender: UIButton) {
+        
+        
+        self.navigationController?.pushViewController(ForgetPassworldViewController(), animated: true);
+        
+    }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true);
     }

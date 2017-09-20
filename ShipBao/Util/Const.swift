@@ -76,6 +76,10 @@ func getControllerFromStoryBoard(_ storyBoardName:String, identity: String) -> U
 }
 
 
+let AccountStoryBoard = "Accout"
+
+
+
 let COLORLIKEGREEN = UIColor.hexStringToUIColor(hex:"#56bc7b")
 
 let COLORLIKEGRAY = UIColor.lightGray
@@ -89,9 +93,19 @@ let SUB_APP_ID = "4e6ff-56baf"
 let VERSIONSTR = "1.0"
 
 let SHIPBAO_APP = "SHIPBAO_APP"
-
-
  let BASE_URL = "http://139.162.37.173:10004/api.php"
+
+let kDdefaultMargin:CGFloat = 20
+let kForgetPassworldTop:CGFloat = 50
+let kDefaultCellSpace:CGFloat = 30
+
+
+func isValidEmail(testStr:String) -> Bool {
+    let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+    
+    let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+    return emailTest.evaluate(with: testStr)
+}
 
 extension ErrorTextField{
     func configErrorTextField(){
@@ -99,11 +113,6 @@ extension ErrorTextField{
         self.placeholderActiveColor = COLORLIKEGREEN
         self.dividerNormalColor = .lightGray
         self.dividerActiveColor = COLORLIKEGREEN
-        
-        
-       // emailField.textInset = 20
-        // Setting the visibilityIconButton color.
-//        passwordField.visibilityIconButton?.tintColor = Color.green.base.withAlphaComponent(passwordField.isSecureTextEntry ? 0.38 : 0.54)
     }
 }
 

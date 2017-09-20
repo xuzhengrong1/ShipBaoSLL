@@ -23,9 +23,6 @@ class IdentityTableViewController:UIViewController,YNTableViewDelegate {
         let ynSliderCell = YNTableViewCell()
         ynSliderCell.cell = tableView.dequeueReusableCell(withIdentifier: "identityPicCell") as! identityPicCell
         ynSliderCell.height = 239
-        
-        
-        
         return ynSliderCell
     }
 

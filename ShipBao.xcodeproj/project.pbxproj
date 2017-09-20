@@ -39,6 +39,11 @@
 		965DA1651F642BE9009434FA /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965DA1621F642BE9009434FA /* Tip.swift */; };
 		965DA1671F65148A009434FA /* ZRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965DA1661F65148A009434FA /* ZRButton.swift */; };
 		965DA6431F6980DF00D607E4 /* CCPScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 965DA6421F6980DF00D607E4 /* CCPScrollView.m */; };
+		965DA6451F6CD4AF00D607E4 /* VerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965DA6441F6CD4AF00D607E4 /* VerifyView.swift */; };
+		965DA6471F6CD51500D607E4 /* ForgetPassworldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965DA6461F6CD51500D607E4 /* ForgetPassworldViewController.swift */; };
+		965FEE2B1F700F9A005D9903 /* SendRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 965FEE2A1F700F9A005D9903 /* SendRecordCell.xib */; };
+		965FEE2D1F729BE1005D9903 /* SendRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965FEE2C1F729BE1005D9903 /* SendRecordCell.swift */; };
+		965FEE2F1F72AB1A005D9903 /* UILable+Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965FEE2E1F72AB1A005D9903 /* UILable+Align.swift */; };
 		966077D71F4809CB0067006B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966077D61F4809CB0067006B /* HomeViewController.swift */; };
 		966077DC1F480C6E0067006B /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966077DA1F480C6E0067006B /* HomeHeaderView.swift */; };
 		966077DD1F480C6E0067006B /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966077DB1F480C6E0067006B /* HomeHeaderView.xib */; };
@@ -108,6 +113,8 @@
 		967254B71F6553AA001A876B /* Warehousesdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967254B41F6553AA001A876B /* Warehousesdata.swift */; };
 		967254B81F6553AA001A876B /* Warehouseslist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967254B51F6553AA001A876B /* Warehouseslist.swift */; };
 		967254BA1F6553DD001A876B /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967254B91F6553DD001A876B /* OrderType.swift */; };
+		9682B9F91F6D202800B59013 /* AccountApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9682B9F81F6D202800B59013 /* AccountApi.swift */; };
+		9682B9FD1F6D25AA00B59013 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9682B9FC1F6D25AA00B59013 /* RegisterViewController.swift */; };
 		96E0CAAC1F5AB2250019CE0D /* CalculateFreightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */; };
 		D8E8A7931FFDB519204A7875 /* Pods_ShipBao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94923F4781EE92B1D676E595 /* Pods_ShipBao.framework */; };
 /* End PBXBuildFile section */
@@ -169,6 +176,11 @@
 		965DA1661F65148A009434FA /* ZRButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZRButton.swift; sourceTree = "<group>"; };
 		965DA6411F6980DF00D607E4 /* CCPScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPScrollView.h; sourceTree = "<group>"; };
 		965DA6421F6980DF00D607E4 /* CCPScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPScrollView.m; sourceTree = "<group>"; };
+		965DA6441F6CD4AF00D607E4 /* VerifyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyView.swift; sourceTree = "<group>"; };
+		965DA6461F6CD51500D607E4 /* ForgetPassworldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPassworldViewController.swift; sourceTree = "<group>"; };
+		965FEE2A1F700F9A005D9903 /* SendRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendRecordCell.xib; sourceTree = "<group>"; };
+		965FEE2C1F729BE1005D9903 /* SendRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendRecordCell.swift; sourceTree = "<group>"; };
+		965FEE2E1F72AB1A005D9903 /* UILable+Align.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILable+Align.swift"; sourceTree = "<group>"; };
 		966077D61F4809CB0067006B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		966077DA1F480C6E0067006B /* HomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		966077DB1F480C6E0067006B /* HomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
@@ -247,6 +259,8 @@
 		967254B41F6553AA001A876B /* Warehousesdata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Warehousesdata.swift; sourceTree = "<group>"; };
 		967254B51F6553AA001A876B /* Warehouseslist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Warehouseslist.swift; sourceTree = "<group>"; };
 		967254B91F6553DD001A876B /* OrderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
+		9682B9F81F6D202800B59013 /* AccountApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountApi.swift; sourceTree = "<group>"; };
+		9682B9FC1F6D25AA00B59013 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculateFreightView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -358,6 +372,8 @@
 			children = (
 				962B92741F4DC4D50077AFF9 /* LoginViewController.swift */,
 				962B92761F4DC4F20077AFF9 /* LoginViewController.xib */,
+				965DA6461F6CD51500D607E4 /* ForgetPassworldViewController.swift */,
+				9682B9FC1F6D25AA00B59013 /* RegisterViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -385,6 +401,7 @@
 		966077C61F4809950067006B /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				9682B9F71F6D201600B59013 /* Service */,
 				966077C71F4809950067006B /* Model */,
 				966077C81F4809950067006B /* View */,
 				966077C91F4809950067006B /* ViewController */,
@@ -451,6 +468,8 @@
 				966077DA1F480C6E0067006B /* HomeHeaderView.swift */,
 				966077DB1F480C6E0067006B /* HomeHeaderView.xib */,
 				96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */,
+				965FEE2A1F700F9A005D9903 /* SendRecordCell.xib */,
+				965FEE2C1F729BE1005D9903 /* SendRecordCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -664,6 +683,7 @@
 				96626A3F1F41FDD400534C5A /* UIControl+Apperance.swift */,
 				96626A431F41FE9A00534C5A /* XZRRuntime.swift */,
 				966077EB1F48321F0067006B /* UIViewController+MethodSwizzing.swift */,
+				965FEE2E1F72AB1A005D9903 /* UILable+Align.swift */,
 			);
 			path = Catergory;
 			sourceTree = "<group>";
@@ -671,6 +691,7 @@
 		96626A451F41FF7C00534C5A /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				965DA6441F6CD4AF00D607E4 /* VerifyView.swift */,
 				9672549B1F653A24001A876B /* Base */,
 				965DA1521F6171AE009434FA /* SwiftyMD5.swift */,
 				962B92521F4B28EE0077AFF9 /* EDMBaseTableviewCell.swift */,
@@ -812,6 +833,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		9682B9F71F6D201600B59013 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9682B9F81F6D202800B59013 /* AccountApi.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		A2637024724AAB2C10623C2D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -944,6 +973,7 @@
 				96626A141F41F9FC00534C5A /* Main.storyboard in Resources */,
 				9600AED81F52AACB004A7002 /* Accout.storyboard in Resources */,
 				96E0CAAC1F5AB2250019CE0D /* CalculateFreightView.xib in Resources */,
+				965FEE2B1F700F9A005D9903 /* SendRecordCell.xib in Resources */,
 				9600AED11F5062B1004A7002 /* DropDownCell.xib in Resources */,
 				962B92771F4DC4F20077AFF9 /* LoginViewController.xib in Resources */,
 				9600AEE01F52BD36004A7002 /* identityPicCell.xib in Resources */,
@@ -1061,6 +1091,7 @@
 				966078111F4842880067006B /* PopTipTransitionAnimation.swift in Sources */,
 				962B92531F4B28EE0077AFF9 /* EDMBaseTableviewCell.swift in Sources */,
 				96626A0F1F41F9FC00534C5A /* AppDelegate.swift in Sources */,
+				9682B9F91F6D202800B59013 /* AccountApi.swift in Sources */,
 				965DA1671F65148A009434FA /* ZRButton.swift in Sources */,
 				966077DC1F480C6E0067006B /* HomeHeaderView.swift in Sources */,
 				967254AA1F653ADA001A876B /* XZRBaseTableViewVC.swift in Sources */,
@@ -1074,14 +1105,19 @@
 				9600AED01F5062B1004A7002 /* DPDUIView+Extension.swift in Sources */,
 				9660780F1F4842880067006B /* OMNITransitionAnimation.swift in Sources */,
 				9600AED61F5298F5004A7002 /* XZRNavButton.swift in Sources */,
+				965DA6471F6CD51500D607E4 /* ForgetPassworldViewController.swift in Sources */,
 				96626A441F41FE9A00534C5A /* XZRRuntime.swift in Sources */,
 				96626A951F47DCFB00534C5A /* UIVerticalLoopView.m in Sources */,
 				96626A781F433C4E00534C5A /* RAMBadge.swift in Sources */,
+				965FEE2F1F72AB1A005D9903 /* UILable+Align.swift in Sources */,
 				966078121F4842880067006B /* ScanbotTransitionAnimation.swift in Sources */,
 				962B924E1F4B26DD0077AFF9 /* MessageOnePicTableViewCell.swift in Sources */,
+				965FEE2D1F729BE1005D9903 /* SendRecordCell.swift in Sources */,
 				966078211F4842880067006B /* TRViewControllerAnimatedTransitioning.swift in Sources */,
 				965DA14E1F5AEB6F009434FA /* SSPopup.m in Sources */,
 				965DA1511F60526B009434FA /* YDMNetWorkTool.swift in Sources */,
+				9682B9FD1F6D25AA00B59013 /* RegisterViewController.swift in Sources */,
+				965DA6451F6CD4AF00D607E4 /* VerifyView.swift in Sources */,
 				965DA1631F642BE9009434FA /* Banner.swift in Sources */,
 				965DA1531F6171AE009434FA /* SwiftyMD5.swift in Sources */,
 				9600AEE41F55AEF7004A7002 /* IdentityTableViewController.swift in Sources */,

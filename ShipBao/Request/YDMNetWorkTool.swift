@@ -108,7 +108,7 @@ extension XZRNetWorkTool {
                     completionHandler(json ,nil)
                 }else{
                     let msg  = json["msg"].rawString()
-                    FTIndicator.showError(withMessage:msg);
+                    FTIndicator.showToastMessage(msg);
                 }
                 print("JSON: \(json)")
                 
@@ -131,7 +131,7 @@ extension XZRNetWorkTool {
         
         var fixedParameters :[String : Any]   = ["sign":siginStr,"method":methodName,"data":json!,"v":VERSIONSTR];
         if let token = Defaults[.usertoken],  token.characters.count > 0 {
-            if methodName != "member_login" {
+            if methodName != "member_login" && methodName != "member_forgot_password"  {
                 fixedParameters["token"] = token
             }
         }

@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,7 +47,7 @@
                                 <color key="titleColor" red="0.66274509803921566" green="0.66274509803921566" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
-                                <action selector="forgetPassWorld:" destination="-1" eventType="touchUpInside" id="f3M-gn-tha"/>
+                                <action selector="forgetPassworld:" destination="-1" eventType="touchUpInside" id="7Ag-yb-w18"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSi-ix-8Kr">
@@ -62,7 +61,7 @@
                                 <color key="titleColor" red="0.34509803921568627" green="0.61960784313725492" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
-                                <action selector="registerAction:" destination="-1" eventType="touchUpInside" id="Oye-nj-kRO"/>
+                                <action selector="registerAction:" destination="-1" eventType="touchUpInside" id="k0Z-db-ySK"/>
                             </connections>
                         </button>
                     </subviews>

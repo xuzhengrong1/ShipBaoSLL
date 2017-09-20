@@ -13,6 +13,7 @@ target 'ShipBao'  do
 #    pod 'YYModel'
     pod 'SwiftyUserDefaults'
     pod 'FSPagerView'
+    pod 'M13Checkbox'
 #    pod 'JKCategories'
 #    pod 'TransitionTreasury', '~> 4.0.0'
 #    pod 'RAMAnimatedTabBarController', '~> 2.0.13'

@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         window?.backgroundColor = UIColor.white
-        window?.rootViewController = LoginViewController()
+        let  baseNav = XZRBaseNavigationController(rootViewController:LoginViewController())
+        
+        window?.rootViewController = baseNav
         window?.makeKeyAndVisible()
         return true
     }

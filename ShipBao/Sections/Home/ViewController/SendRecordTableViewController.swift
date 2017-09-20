@@ -180,7 +180,8 @@ class SendRecordTableViewController: UITableViewController, IndicatorInfoProvide
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.title = "1111";
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+       tableView.registerCell(String(describing: SendRecordCell.self))
+//        tableView.register(SendRecordCell.self, forCellReuseIdentifier: "UITableViewCell")
 
         tableView.estimatedRowHeight = 102;
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -255,58 +256,58 @@ class SendRecordTableViewController: UITableViewController, IndicatorInfoProvide
         }
         
     }
+//    
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 102
+//    }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 102
-    }
     
     
-    
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if(self.tabType=="recommend"){
-            if(section==0){
-                let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
-                let label = UILabel(frame: CGRect(x: 40, y: 14, width: 100, height: 16))
-                label.text="今周课程"
-                let imageView=UIImageView(frame: CGRect(x: 12, y: 12, width: 20, height: 20))
-                imageView.image=UIImage(named:"kecheng")
-                view.addSubview(label)
-                view.addSubview(imageView)
-                return view
-            }else if(section==1){
-                let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
-                let label = UILabel(frame: CGRect(x: 40, y: 14, width: 100, height: 16))
-                label.text="干货 | 资讯"
-                let imageView=UIImageView(frame: CGRect(x: 12, y: 12, width: 20, height: 20))
-                imageView.image=UIImage(named:"zixun")
-                view.addSubview(label)
-                view.addSubview(imageView)
-                return view
-            }
-        }else if(self.tabType=="new"){
-            if(section==0){
-                let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
-                let label = UILabel(frame: CGRect(x: 40, y: 14, width: 100, height: 16))
-                label.text="今周课程"
-                let imageView=UIImageView(frame: CGRect(x: 12, y: 12, width: 20, height: 20))
-                imageView.image=UIImage(named:"kecheng")
-                view.addSubview(label)
-                view.addSubview(imageView)
-                return view
-            }else if(section==1){
-                let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
-                let label = UILabel(frame: CGRect(x: 40, y: 14, width: 100, height: 16))
-                label.text="往期课程"
-                let imageView=UIImageView(frame: CGRect(x: 12, y: 12, width: 20, height: 20))
-                imageView.image=UIImage(named:"kecheng_w")
-                view.addSubview(label)
-                view.addSubview(imageView)
-                return view
-            }
-        }
-        
-        return nil
-    }
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        if(self.tabType=="recommend"){
+//            if(section==0){
+//                let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
+//                let label = UILabel(frame: CGRect(x: 40, y: 14, width: 100, height: 16))
+//                label.text="今周课程"
+//                let imageView=UIImageView(frame: CGRect(x: 12, y: 12, width: 20, height: 20))
+//                imageView.image=UIImage(named:"kecheng")
+//                view.addSubview(label)
+//                view.addSubview(imageView)
+//                return view
+//            }else if(section==1){
+//                let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
+//                let label = UILabel(frame: CGRect(x: 40, y: 14, width: 100, height: 16))
+//                label.text="干货 | 资讯"
+//                let imageView=UIImageView(frame: CGRect(x: 12, y: 12, width: 20, height: 20))
+//                imageView.image=UIImage(named:"zixun")
+//                view.addSubview(label)
+//                view.addSubview(imageView)
+//                return view
+//            }
+//        }else if(self.tabType=="new"){
+//            if(section==0){
+//                let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
+//                let label = UILabel(frame: CGRect(x: 40, y: 14, width: 100, height: 16))
+//                label.text="今周课程"
+//                let imageView=UIImageView(frame: CGRect(x: 12, y: 12, width: 20, height: 20))
+//                imageView.image=UIImage(named:"kecheng")
+//                view.addSubview(label)
+//                view.addSubview(imageView)
+//                return view
+//            }else if(section==1){
+//                let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
+//                let label = UILabel(frame: CGRect(x: 40, y: 14, width: 100, height: 16))
+//                label.text="往期课程"
+//                let imageView=UIImageView(frame: CGRect(x: 12, y: 12, width: 20, height: 20))
+//                imageView.image=UIImage(named:"kecheng_w")
+//                view.addSubview(label)
+//                view.addSubview(imageView)
+//                return view
+//            }
+//        }
+//        
+//        return nil
+//    }
    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -338,7 +339,8 @@ class SendRecordTableViewController: UITableViewController, IndicatorInfoProvide
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       var cell = tableView.dequeueCelllForReuse(UITableViewCell.self, indexPath: indexPath)
+       let cell = tableView.dequeueCelllForReuse(SendRecordCell.self, indexPath: indexPath)
+        
         
         return cell;
     }

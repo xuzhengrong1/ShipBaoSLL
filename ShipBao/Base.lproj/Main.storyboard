@@ -130,7 +130,7 @@
         <scene sceneID="BR9-Ox-Id7">
             <objects>
                 <navigationController id="rbT-P4-NoN" customClass="EDMBaseNavigationController" customModule="ShipBao" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首頁" image="Settings" id="Aow-aR-yZS" customClass="RAMAnimatedTabBarItem" customModule="ShipBao" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="首頁" image="ic_home_grey" id="Aow-aR-yZS" customClass="RAMAnimatedTabBarItem" customModule="ShipBao" customModuleProvider="target">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                 <color key="value" red="0.66274509803921566" green="0.66274509803921566" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -140,7 +140,7 @@
                             <outlet property="animation" destination="6J3-59-6eG" id="33U-Y2-Yoc"/>
                         </connections>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="z9s-Sh-q8d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z9s-Sh-q8d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -423,7 +423,7 @@
         <scene sceneID="egw-gT-9nf">
             <objects>
                 <navigationController id="IM2-VC-JTz" customClass="EDMBaseNavigationController" customModule="ShipBao" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="賬戶" image="Settings" id="yE1-AT-Ppi" customClass="RAMAnimatedTabBarItem" customModule="ShipBao" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="賬戶" image="ic_person_grey" id="yE1-AT-Ppi" customClass="RAMAnimatedTabBarItem" customModule="ShipBao" customModuleProvider="target">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                 <color key="value" red="0.66274509803921566" green="0.66274509803921566" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -433,7 +433,7 @@
                             <outlet property="animation" destination="lZK-xm-gGd" id="Zzl-ux-glI"/>
                         </connections>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="aBs-a8-rb3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aBs-a8-rb3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -462,7 +462,7 @@
         <scene sceneID="8mP-jk-xdz">
             <objects>
                 <navigationController id="8gI-kR-wBO" customClass="EDMBaseNavigationController" customModule="ShipBao" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="郵包分享" image="Settings" id="RiF-Oj-1uO" customClass="RAMAnimatedTabBarItem" customModule="ShipBao" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="郵包分享" image="ic_share_grey" id="RiF-Oj-1uO" customClass="RAMAnimatedTabBarItem" customModule="ShipBao" customModuleProvider="target">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                 <color key="value" red="0.66274509803921566" green="0.66274509803921566" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -472,7 +472,7 @@
                             <outlet property="animation" destination="b5b-Vj-lch" id="1sn-jw-OlZ"/>
                         </connections>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="pF7-VT-LOy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pF7-VT-LOy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -501,7 +501,7 @@
         <scene sceneID="H7K-8S-edn">
             <objects>
                 <navigationController id="M7W-ZG-p9u" customClass="EDMBaseNavigationController" customModule="ShipBao" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="消息" image="Settings" id="3Ex-0C-kLA" customClass="RAMAnimatedTabBarItem" customModule="ShipBao" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="消息" image="ic_notifications_grey" id="3Ex-0C-kLA" customClass="RAMAnimatedTabBarItem" customModule="ShipBao" customModuleProvider="target">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                 <color key="value" red="0.66274509803921566" green="0.66274509803921566" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -511,7 +511,7 @@
                             <outlet property="animation" destination="sZr-Uk-thh" id="foH-GX-nZS"/>
                         </connections>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xdP-kE-cf0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xdP-kE-cf0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -538,6 +538,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Settings" width="30" height="30"/>
+        <image name="ic_home_grey" width="30" height="30"/>
+        <image name="ic_notifications_grey" width="30" height="30"/>
+        <image name="ic_person_grey" width="30" height="30"/>
+        <image name="ic_share_grey" width="30" height="30"/>
     </resources>
 </document>
