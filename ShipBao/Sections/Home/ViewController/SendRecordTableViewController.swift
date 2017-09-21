@@ -186,6 +186,10 @@ class SendRecordTableViewController: UITableViewController, IndicatorInfoProvide
         tableView.estimatedRowHeight = 102;
         tableView.rowHeight = UITableViewAutomaticDimension
         navigationController?.navigationBar.barTintColor = UIColor.hexStringToUIColor(hex: "#FAFBFD");
+        
+        XZRNetWorkTool.shared.getOrderList(scene: 1, page: 1, pageSize: 2) { (response ) in
+            
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

@@ -96,7 +96,7 @@ extension XZRNetWorkTool {
         
     }
     
-    func postRequest(methodName : String, params :  [String : String]?, completionHandler : @escaping (_ responseObject : JSON?,_ error: NSError?)->() ) {
+    func postRequest(methodName : String, params :  [String : Any]?, completionHandler : @escaping (_ responseObject : JSON?,_ error: NSError?)->() ) {
         let requestDic  = self.formartParameters(params: params, methodName: methodName ,userToken: true);
         Alamofire.request(BASE_URL, method: .post, parameters: requestDic , encoding: URLEncoding.default , headers: nil).responseJSON{
             response in
@@ -122,7 +122,7 @@ extension XZRNetWorkTool {
         self.request(urlString: urlString, method: "GET",params: params,  completionHandler: completionHandler)
     }
     
-    func formartParameters(params:[String: String]? = nil ,methodName : String = "", userToken: Bool) -> [String : Any] {
+    func formartParameters(params:[String: Any]? = nil ,methodName : String = "", userToken: Bool) -> [String : Any] {
         let json = ELJJSON.jsonString(params);
 
         let sigin = APP_ID + SUB_APP_ID +  "\(json!)" + methodName  + VERSIONSTR + SHIPBAO_APP

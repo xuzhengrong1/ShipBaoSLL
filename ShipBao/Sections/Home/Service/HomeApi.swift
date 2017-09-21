@@ -11,6 +11,23 @@ import SwiftyUserDefaults
 import SwiftyJSON
 extension XZRNetWorkTool{
     
+    func getOrderList(scene:Int,page:Int,pageSize:Int,finished:@escaping (_ homData: RecordDataList?)->()) -> () {
+        let params =  [ "scene" : scene,"page": page,"page_size":pageSize];
+        
+        XZRNetWorkTool.shared.postRequest(methodName:"order_list", params: params) { (response, error) in
+            if let responseStr = response?.rawString()  {
+                
+              let recordData =   RecordDataList(JSONString: responseStr);
+                finished(recordData);
+                
+//                let wareHouse =  Warehousesdata(JSONString:responseStr );
+//                finished(wareHouse);
+            }
+        }
+        
+    }
+    
+    
     func loadWarehouses(finished:@escaping (_ homData: Warehousesdata?)->()) -> () {
         let params =  [ "scene" : "" ];
         XZRNetWorkTool.shared.postRequest(methodName:"parcel_warehouses_list", params: params) { (response, error) in

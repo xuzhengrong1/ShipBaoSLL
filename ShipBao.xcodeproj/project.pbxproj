@@ -115,6 +115,12 @@
 		967254BA1F6553DD001A876B /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967254B91F6553DD001A876B /* OrderType.swift */; };
 		9682B9F91F6D202800B59013 /* AccountApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9682B9F81F6D202800B59013 /* AccountApi.swift */; };
 		9682B9FD1F6D25AA00B59013 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9682B9FC1F6D25AA00B59013 /* RegisterViewController.swift */; };
+		968326231F74035A000D1BCB /* CategoryCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683261D1F74035A000D1BCB /* CategoryCount.swift */; };
+		968326241F74035A000D1BCB /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683261E1F74035A000D1BCB /* DataList.swift */; };
+		968326251F74035A000D1BCB /* Parcel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683261F1F74035A000D1BCB /* Parcel.swift */; };
+		968326261F74035A000D1BCB /* ParcelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968326201F74035A000D1BCB /* ParcelInfo.swift */; };
+		968326271F74035A000D1BCB /* RecordDataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968326211F74035A000D1BCB /* RecordDataList.swift */; };
+		968326281F74035A000D1BCB /* RecordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968326221F74035A000D1BCB /* RecordList.swift */; };
 		96E0CAAC1F5AB2250019CE0D /* CalculateFreightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */; };
 		D8E8A7931FFDB519204A7875 /* Pods_ShipBao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94923F4781EE92B1D676E595 /* Pods_ShipBao.framework */; };
 /* End PBXBuildFile section */
@@ -261,6 +267,12 @@
 		967254B91F6553DD001A876B /* OrderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
 		9682B9F81F6D202800B59013 /* AccountApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountApi.swift; sourceTree = "<group>"; };
 		9682B9FC1F6D25AA00B59013 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9683261D1F74035A000D1BCB /* CategoryCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCount.swift; sourceTree = "<group>"; };
+		9683261E1F74035A000D1BCB /* DataList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
+		9683261F1F74035A000D1BCB /* Parcel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parcel.swift; sourceTree = "<group>"; };
+		968326201F74035A000D1BCB /* ParcelInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParcelInfo.swift; sourceTree = "<group>"; };
+		968326211F74035A000D1BCB /* RecordDataList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordDataList.swift; sourceTree = "<group>"; };
+		968326221F74035A000D1BCB /* RecordList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordList.swift; sourceTree = "<group>"; };
 		96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculateFreightView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -451,6 +463,12 @@
 		966077CB1F4809950067006B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9683261D1F74035A000D1BCB /* CategoryCount.swift */,
+				9683261E1F74035A000D1BCB /* DataList.swift */,
+				9683261F1F74035A000D1BCB /* Parcel.swift */,
+				968326201F74035A000D1BCB /* ParcelInfo.swift */,
+				968326211F74035A000D1BCB /* RecordDataList.swift */,
+				968326221F74035A000D1BCB /* RecordList.swift */,
 				967254B31F6553AA001A876B /* List.swift */,
 				967254B91F6553DD001A876B /* OrderType.swift */,
 				967254B41F6553AA001A876B /* Warehousesdata.swift */,
@@ -1053,6 +1071,7 @@
 				96626A731F433C4E00534C5A /* RAMFrameItemAnimation.swift in Sources */,
 				967254961F651F97001A876B /* CalculateVolumeController.swift in Sources */,
 				966078151F4842880067006B /* TransitionAnimationHelper.swift in Sources */,
+				968326271F74035A000D1BCB /* RecordDataList.swift in Sources */,
 				966078141F4842880067006B /* TaaskyFlipTransitionAnimation.swift in Sources */,
 				966077E41F48179B0067006B /* GeneralDataSource.swift in Sources */,
 				9660781E1F4842880067006B /* UITabBarController+TRTransition.swift in Sources */,
@@ -1062,6 +1081,7 @@
 				9660781F1F4842880067006B /* TransitionTreasury.swift in Sources */,
 				966078161F4842880067006B /* TRTransitionAnimations.swift in Sources */,
 				965DA1651F642BE9009434FA /* Tip.swift in Sources */,
+				968326231F74035A000D1BCB /* CategoryCount.swift in Sources */,
 				96626A771F433C4E00534C5A /* RAMAnimatedTabBarController.swift in Sources */,
 				9600AED31F5062B1004A7002 /* DropDown.swift in Sources */,
 				967254B71F6553AA001A876B /* Warehousesdata.swift in Sources */,
@@ -1114,9 +1134,11 @@
 				962B924E1F4B26DD0077AFF9 /* MessageOnePicTableViewCell.swift in Sources */,
 				965FEE2D1F729BE1005D9903 /* SendRecordCell.swift in Sources */,
 				966078211F4842880067006B /* TRViewControllerAnimatedTransitioning.swift in Sources */,
+				968326251F74035A000D1BCB /* Parcel.swift in Sources */,
 				965DA14E1F5AEB6F009434FA /* SSPopup.m in Sources */,
 				965DA1511F60526B009434FA /* YDMNetWorkTool.swift in Sources */,
 				9682B9FD1F6D25AA00B59013 /* RegisterViewController.swift in Sources */,
+				968326261F74035A000D1BCB /* ParcelInfo.swift in Sources */,
 				965DA6451F6CD4AF00D607E4 /* VerifyView.swift in Sources */,
 				965DA1631F642BE9009434FA /* Banner.swift in Sources */,
 				965DA1531F6171AE009434FA /* SwiftyMD5.swift in Sources */,
@@ -1126,6 +1148,7 @@
 				96626A941F47DCFB00534C5A /* TwoLabeView.m in Sources */,
 				96626A751F433C4E00534C5A /* RAMRotationAnimation.swift in Sources */,
 				9600AEE61F55B3CD004A7002 /* AccountViewController.swift in Sources */,
+				968326241F74035A000D1BCB /* DataList.swift in Sources */,
 				96626A761F433C4E00534C5A /* RAMTransitionItemAnimations.swift in Sources */,
 				966077E21F48175E0067006B /* UITableView+RegisterNib.swift in Sources */,
 				967254AF1F65409E001A876B /* ZRBaseView.swift in Sources */,
@@ -1135,6 +1158,7 @@
 				965DA1591F62DBA1009434FA /* ELJJSON.m in Sources */,
 				9600AED21F5062B1004A7002 /* DropDown+Appearance.swift in Sources */,
 				9600AECF1F5062B1004A7002 /* DPDKeyboardListener.swift in Sources */,
+				968326281F74035A000D1BCB /* RecordList.swift in Sources */,
 				967254B21F654699001A876B /* HomeApi.swift in Sources */,
 				966078191F4842880067006B /* UIViewController+TRPresent.swift in Sources */,
 				9600AECE1F5062B1004A7002 /* DPDConstants.swift in Sources */,
