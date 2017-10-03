@@ -26,10 +26,10 @@ class OrderDetialCell: XZRBaseTableviewCell {
             self.packgeInfoLable.text = pagekageInfo;
             //self.orderStatusValueLabel.text = record.trackingMsg
             if  data.weight != nil{
-                self.weightLable.text = "\(data.weight!)\(data.weightUnit)"
+                self.weightLable.text = "\(data.weight!)\(data.weightUnit!)"
             }
             
-             self.amountLable.text = "\(data.currency)\(totalAmount)"
+             self.amountLable.text = "\(data.currency!)\(totalAmount)"
             
             //self.statusTimeValueLable.text = record.trackingTime
         }

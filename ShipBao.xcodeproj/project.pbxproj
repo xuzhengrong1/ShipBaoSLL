@@ -127,6 +127,7 @@
 		9683262E1F77E155000D1BCB /* SendRecordNoFinaishedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683262D1F77E155000D1BCB /* SendRecordNoFinaishedCell.swift */; };
 		968326301F7D3AA2000D1BCB /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683262F1F7D3AA2000D1BCB /* TestViewController.swift */; };
 		968326321F813981000D1BCB /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968326311F813981000D1BCB /* OrderDetailsViewController.swift */; };
+		9698B3A51F83CF8800959450 /* OrderDetialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9698B3A41F83CF8800959450 /* OrderDetialCell.xib */; };
 		96E0CAAC1F5AB2250019CE0D /* CalculateFreightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */; };
 		96EF2B491F83355E00DC7982 /* OrderDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF2B481F83355E00DC7982 /* OrderDetailData.swift */; };
 		D8E8A7931FFDB519204A7875 /* Pods_ShipBao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94923F4781EE92B1D676E595 /* Pods_ShipBao.framework */; };
@@ -286,6 +287,7 @@
 		9683262D1F77E155000D1BCB /* SendRecordNoFinaishedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendRecordNoFinaishedCell.swift; sourceTree = "<group>"; };
 		9683262F1F7D3AA2000D1BCB /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		968326311F813981000D1BCB /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
+		9698B3A41F83CF8800959450 /* OrderDetialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderDetialCell.xib; sourceTree = "<group>"; };
 		96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculateFreightView.xib; sourceTree = "<group>"; };
 		96EF2B481F83355E00DC7982 /* OrderDetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -506,6 +508,7 @@
 				9683262B1F77DD51000D1BCB /* SendRecordNoFinaishedCell.xib */,
 				9683262D1F77E155000D1BCB /* SendRecordNoFinaishedCell.swift */,
 				961EF5951F833C48007DCC12 /* OrderDetialCell.swift */,
+				9698B3A41F83CF8800959450 /* OrderDetialCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1009,6 +1012,7 @@
 				9672549A1F652D78001A876B /* CalculateVolumeController.xib in Resources */,
 				962B924B1F4B1D150077AFF9 /* MessageOnePicTableViewCell.xib in Resources */,
 				96626A8E1F47DBCF00534C5A /* LLCycleScrollView.bundle in Resources */,
+				9698B3A51F83CF8800959450 /* OrderDetialCell.xib in Resources */,
 				960E0A571F5AA83C00DDF219 /* Home.storyboard in Resources */,
 				96626A141F41F9FC00534C5A /* Main.storyboard in Resources */,
 				9600AED81F52AACB004A7002 /* Accout.storyboard in Resources */,

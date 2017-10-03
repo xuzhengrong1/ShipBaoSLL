@@ -13,8 +13,6 @@ class OrderDetailsViewController: XZRBaseTableViewVC {
     override func viewDidLoad() {
         super.viewDidLoad();
         self.tableView.registerCell(String(describing: OrderDetialCell.self))
-        
-        
         XZRNetWorkTool.shared.getOrderDetailData(orderId:Int((orderList?.id)!)!) { (recordData) in
             self.recordData = recordData
             self.transferTypeLable.text = recordData?.code
@@ -25,6 +23,8 @@ class OrderDetailsViewController: XZRBaseTableViewVC {
            // recordData.
             //self.transferTypeLable.text = "運單號：\(rec)"
             self.tableView.reloadData();
+           // self.tableView.layoutIfNeeded();
+            
         }
        
         //self.addressLable.text = orderList.
@@ -38,6 +38,10 @@ class OrderDetailsViewController: XZRBaseTableViewVC {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2;
+    }
+   
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
    
     
