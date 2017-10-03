@@ -25,7 +25,7 @@
 import Foundation
 import XLPagerTabStrip
 //import SSCycleScrollView
-//import MJRefresh
+import MJRefresh
 
 class SendRecordTableViewController: UITableViewController, IndicatorInfoProvider {
     
@@ -39,11 +39,7 @@ class SendRecordTableViewController: UITableViewController, IndicatorInfoProvide
     
         
     var tabType : String
-    
-//    var banners : [EDMList] = []
-//    
-//    var articles : [EDMArticlelist] = []
-//    var courses : [CourseList] = []
+    var orderList:[RecordList] = []
     init(style: UITableViewStyle, itemInfo: String, type: String) {
         self.itemInfo = IndicatorInfo(title: itemInfo)
         self.tabType = type
@@ -58,263 +54,122 @@ class SendRecordTableViewController: UITableViewController, IndicatorInfoProvide
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func loadMoreData() {
+        
+        if noMoreData {
+            
+            tableView.mj_footer.endRefreshingWithNoMoreData();
+            return;
+        }
+        pageIndex += 1
+        getRecordListData(pageIndex)
+        
+    }
+    
+    
+    func getRecordListData(_ page: Int) {
+        
+        XZRNetWorkTool.shared.getOrderList(scene: Int(self.tabType)!, page: page, pageSize: 5) { (response ) in
+
+            if let recods  = response?.dataList?.recordList
+            {
+                
+               
+                if recods.count > 0
+                {
+                    if(self.pageIndex <= 1)
+                    {
+                       self.orderList = recods
+                        DispatchQueue.main.async {
+                            self.tableView.mj_footer = MJRefreshAutoNormalFooter.createFooter(self, refreshAction: #selector(self.loadMoreData))
+                        }
+                    }else
+                    {
+                        
+                        self.orderList.append(contentsOf: recods);
+                       
+                    }
+
+                }
+                if   recods.count < 5 {
+                    self.noMoreData = true
+                    if((self.tableView.mj_footer) != nil)
+                    {
+                        self.tableView.mj_footer.endRefreshingWithNoMoreData();
+                    }
+                }
+                
+            }
+             self.tableView.reloadData();
+            self.endMJRefresh();
+    }
+    }
 //
 //
-//    func getCollegeData(_ page: Int) {
-//        XZRNetWorkTool.shared.getCollegeData(page: page ,category: self.tabType, {articles in
-//            if articles != nil {
-//                
-//                if let count  = (articles?.articlelist?.count), count < 10 {
-//                    self.noMoreData = true
-//                    if((self.tableView.mj_footer) != nil)
-//                    {
-//                       self.tableView.mj_footer.endRefreshingWithNoMoreData();
-//                    }
-//                }
-//            if let articlelist  = articles?.articlelist
-//            {
-//                if(self.pageIndex <= 1)
-//                {
-//                    self.articles = articlelist
-//                    self.tableView.reloadData()
-//                    if(articlelist.count >= 10)
-//                    {
-//                        DispatchQueue.main.async {
-//                            self.tableView.mj_footer = MJRefreshAutoNormalFooter.createFooter(self, refreshAction: #selector(self.loadMoreData))
-//                        }
-//                    }
-//                }else
-//                {
-//                    
-//                    self.articles.append(contentsOf: articlelist)
-//                    self.tableView.reloadData()
-//                }
-//            }
-//            }
-//             self.endMJRefresh()
-//        }
-//        )
-//    }
-//    
-//    func getCourseData(_ page: Int,_ isThisWeek :Int) {
-//        XZRNetWorkTool.shared.getCourseData(page: page ,isThisWeek: isThisWeek ,{courseList in
-//            if courseList != nil {
-//                
-//                if let count  = (courseList?.list?.count), count < 10 {
-//                    self.noMoreData = true
-//                    if((self.tableView.mj_footer) != nil)
-//                    {
-//                        self.tableView.mj_footer.endRefreshingWithNoMoreData();
-//                    }
-//                }
-//                if let courseList  = courseList?.list
-//                {
-//                    if(self.pageIndex <= 1)
-//                    {
-//                        self.courses = courseList
-//                        self.tableView.reloadData()
-//                        if(courseList.count >= 10)
-//                        {
-//                            DispatchQueue.main.async {
-//                                self.tableView.mj_footer = MJRefreshAutoNormalFooter.createFooter(self, refreshAction: #selector(self.loadMoreData))
-//                            }
-//                        }
-//                    }else
-//                    {
-//                        
-//                        self.courses.append(contentsOf: courseList)
-//                        self.tableView.reloadData()
-//                    }
-//                }
-//            }
-//            self.endMJRefresh()
-//        }
-//        )
-//    }
-//    
-//    
-//    func endMJRefresh() {
-//        self.tableView.mj_header.endRefreshing()
-//        if((self.tableView.mj_footer) != nil)
-//        {
-//            self.tableView.mj_footer.endRefreshing()
-//        }
-//    }
-//    func requstBannerData(){
-//        XZRNetWorkTool.shared.getBannerData(category: self.tabType ,{ banners  in
-//            if banners != nil && banners?.list != nil {
-//                self.banners = (banners?.list)!
-//                var urls :[Any] = []
-//        
-//               for list  in self.banners
-//               {
-//                var urlArr :[String] = []
-//                if list.pic != nil {
-//                    urlArr .append(list.pic!)
-//                    urlArr.append("icon_banerplaceholder")
-//                }
-//                urls .append(urlArr)
-//                
-//                }
-//                
-//                self.cycleScrolllview.allImageUrls = urls as! [[String]]
-//                self.cycleScrolllview.reloadImages()
-//                self.cycleScrolllview.tapBlock = {index in
-//                   
-//                   let list  =  self.banners[index]
-//                
-//                        if list.url != nil && (list.url?.characters.count)! > 0 {
-//                            
-//                            DispatchQueue.main.async {
-//                                let webVc = EDMWebViewController.start(title: list.title ?? "", url: list.url!)
-//                                //                            webVc.hidesBottomBarWhenPushed = true
-//                                self.navigationController?.pushViewController(webVc, animated: true);
-//                            }
-//                            
-//                            
-//                        }
-//                }
-//            }
-//        })
-//    }
+    func endMJRefresh() {
+        self.tableView.mj_header.endRefreshing()
+        if((self.tableView.mj_footer) != nil)
+        {
+            self.tableView.mj_footer.endRefreshing()
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.title = "1111";
-       tableView.registerCell(String(describing: SendRecordCell.self))
-//        tableView.register(SendRecordCell.self, forCellReuseIdentifier: "UITableViewCell")
-
+        if tabType == "1" {
+          tableView.registerCell(String(describing: SendRecordCell.self))
+        }else
+        {
+            tableView.registerCell(String(describing: SendRecordNoFinaishedCell.self))
+        }
+       
+        self.pageIndex = 1;
         tableView.estimatedRowHeight = 102;
         tableView.rowHeight = UITableViewAutomaticDimension
         navigationController?.navigationBar.barTintColor = UIColor.hexStringToUIColor(hex: "#FAFBFD");
+        self.addHeaderFooterView();
+    }
+
+    
+    
+
+    
+    func addHeaderFooterView() {
+        self.tableView.mj_header =  MJRefreshNormalHeader(refreshingBlock: {
+            self.pageIndex = 1;
+            self.noMoreData = false ;
+        self.getRecordListData(self.pageIndex);
+        });
+        self.getRecordListData(self.pageIndex);
         
-        XZRNetWorkTool.shared.getOrderList(scene: 1, page: 1, pageSize: 2) { (response ) in
-            
-        }
+        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        if(self.tabType=="recommend" || self.tabType=="new"){
-            return 2
-        }else{
-            return 1
-        }
+        return orderList.count
     }
-    
-    
-//    func requstAllData()  {
-//        let OP1 = BlockOperation {
-//            [unowned self]
-//            () -> Void in
-//            self.requstBannerData()
-//        }
-//        
-//        let OP2 = BlockOperation {
-//            [unowned self]
-//            () -> Void in
-//            self.getCollegeData(self.pageIndex)
-//        }
-//        OP2.addDependency(OP1)
-//        let OP3 = BlockOperation {
-//            [unowned self]
-//            () -> Void in
-//            self.getCourseData(self.pageIndex,1)
-//        }
-//        let QE = OperationQueue()
-//        QE.addOperation(OP1)
-//        QE.addOperation(OP2)
-//        QE.addOperation(OP3)
-//        QE.waitUntilAllOperationsAreFinished()
-//    }
-    
-//    func addHeaderFooterView() {
-//      self.tableView.mj_header =  MJRefreshNormalHeader(refreshingBlock: {
-//        self.pageIndex = 1;
-//        self.noMoreData = false ;
-//        self.requstAllData()
-//      });
-//    }
-    
-    
-//    func loadMoreData() {
-//        
-//        if noMoreData {
-//            
-//            tableView.mj_footer.endRefreshingWithNoMoreData();
-//            return;
-//        }
-//        pageIndex += 1
-//        getCollegeData(pageIndex)
-//        
-//    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1;
         
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if(self.tabType=="recommend" || self.tabType=="new"){
-            return 44
-        }else{
-            return 0
-        }
+        return 10;
         
     }
-//    
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 102
-//    }
-    
-    
-    
-//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        if(self.tabType=="recommend"){
-//            if(section==0){
-//                let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
-//                let label = UILabel(frame: CGRect(x: 40, y: 14, width: 100, height: 16))
-//                label.text="今周课程"
-//                let imageView=UIImageView(frame: CGRect(x: 12, y: 12, width: 20, height: 20))
-//                imageView.image=UIImage(named:"kecheng")
-//                view.addSubview(label)
-//                view.addSubview(imageView)
-//                return view
-//            }else if(section==1){
-//                let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
-//                let label = UILabel(frame: CGRect(x: 40, y: 14, width: 100, height: 16))
-//                label.text="干货 | 资讯"
-//                let imageView=UIImageView(frame: CGRect(x: 12, y: 12, width: 20, height: 20))
-//                imageView.image=UIImage(named:"zixun")
-//                view.addSubview(label)
-//                view.addSubview(imageView)
-//                return view
-//            }
-//        }else if(self.tabType=="new"){
-//            if(section==0){
-//                let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
-//                let label = UILabel(frame: CGRect(x: 40, y: 14, width: 100, height: 16))
-//                label.text="今周课程"
-//                let imageView=UIImageView(frame: CGRect(x: 12, y: 12, width: 20, height: 20))
-//                imageView.image=UIImage(named:"kecheng")
-//                view.addSubview(label)
-//                view.addSubview(imageView)
-//                return view
-//            }else if(section==1){
-//                let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 44))
-//                let label = UILabel(frame: CGRect(x: 40, y: 14, width: 100, height: 16))
-//                label.text="往期课程"
-//                let imageView=UIImageView(frame: CGRect(x: 12, y: 12, width: 20, height: 20))
-//                imageView.image=UIImage(named:"kecheng_w")
-//                view.addSubview(label)
-//                view.addSubview(imageView)
-//                return view
-//            }
-//        }
-//        
-//        return nil
-//    }
    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        let cellData = self.orderList[indexPath.section];
+        
+
+        let vc =   getControllerFromStoryBoard("Home", identity:String(describing: OrderDetailsViewController.self)) as! OrderDetailsViewController;
+        vc.orderList = cellData;
+         navigationController?.pushViewController(vc, animated: true)
+        
         
 //       let cell  =  tableView.cellForRow(at: indexPath) as! EDMHomeNewView;
 //        cell.titleLable?.textColor = UIColor.lightGray
@@ -343,11 +198,21 @@ class SendRecordTableViewController: UITableViewController, IndicatorInfoProvide
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let cell = tableView.dequeueCelllForReuse(SendRecordCell.self, indexPath: indexPath)
-        
-        
-        return cell;
-    }
+        if tabType == "1" {
+            let cell = tableView.dequeueCelllForReuse(SendRecordCell.self, indexPath: indexPath) as! SendRecordCell
+            let cellData = self.orderList[indexPath.section];
+            cell.record = cellData;
+            return cell;
+
+        }else
+        {
+            let cell = tableView.dequeueCelllForReuse(SendRecordNoFinaishedCell.self, indexPath: indexPath) as! SendRecordNoFinaishedCell
+            let cellData = self.orderList[indexPath.section];
+            cell.record = cellData;
+            return cell;
+        }
+       
+           }
 
     
     // MARK: - IndicatorInfoProvider

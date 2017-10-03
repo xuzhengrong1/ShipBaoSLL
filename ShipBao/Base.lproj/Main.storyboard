@@ -12,7 +12,7 @@
         <scene sceneID="B9q-j3-N79">
             <objects>
                 <tableViewController id="xP6-Yi-yis" customClass="HomeViewController" customModule="ShipBao" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="1" id="Efu-ga-3cx">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="1" id="Efu-ga-3cx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -140,7 +140,7 @@
                             <outlet property="animation" destination="6J3-59-6eG" id="33U-Y2-Yoc"/>
                         </connections>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z9s-Sh-q8d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="z9s-Sh-q8d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -433,7 +433,7 @@
                             <outlet property="animation" destination="lZK-xm-gGd" id="Zzl-ux-glI"/>
                         </connections>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aBs-a8-rb3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="aBs-a8-rb3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -472,7 +472,7 @@
                             <outlet property="animation" destination="b5b-Vj-lch" id="1sn-jw-OlZ"/>
                         </connections>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pF7-VT-LOy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="pF7-VT-LOy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -511,7 +511,7 @@
                             <outlet property="animation" destination="sZr-Uk-thh" id="foH-GX-nZS"/>
                         </connections>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xdP-kE-cf0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xdP-kE-cf0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

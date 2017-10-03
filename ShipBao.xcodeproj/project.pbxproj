@@ -24,6 +24,7 @@
 		9600AEE41F55AEF7004A7002 /* IdentityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600AEE31F55AEF7004A7002 /* IdentityTableViewController.swift */; };
 		9600AEE61F55B3CD004A7002 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600AEE51F55B3CD004A7002 /* AccountViewController.swift */; };
 		960E0A571F5AA83C00DDF219 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 960E0A561F5AA83C00DDF219 /* Home.storyboard */; };
+		961EF5961F833C48007DCC12 /* OrderDetialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961EF5951F833C48007DCC12 /* OrderDetialCell.swift */; };
 		962B924B1F4B1D150077AFF9 /* MessageOnePicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962B924A1F4B1D150077AFF9 /* MessageOnePicTableViewCell.xib */; };
 		962B924E1F4B26DD0077AFF9 /* MessageOnePicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B924C1F4B26DD0077AFF9 /* MessageOnePicTableViewCell.swift */; };
 		962B92511F4B27E80077AFF9 /* ShareMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B92501F4B27E80077AFF9 /* ShareMessageController.swift */; };
@@ -121,7 +122,13 @@
 		968326261F74035A000D1BCB /* ParcelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968326201F74035A000D1BCB /* ParcelInfo.swift */; };
 		968326271F74035A000D1BCB /* RecordDataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968326211F74035A000D1BCB /* RecordDataList.swift */; };
 		968326281F74035A000D1BCB /* RecordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968326221F74035A000D1BCB /* RecordList.swift */; };
+		9683262A1F77B4F4000D1BCB /* EDMAutoFooter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968326291F77B4F4000D1BCB /* EDMAutoFooter+Extension.swift */; };
+		9683262C1F77DD51000D1BCB /* SendRecordNoFinaishedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9683262B1F77DD51000D1BCB /* SendRecordNoFinaishedCell.xib */; };
+		9683262E1F77E155000D1BCB /* SendRecordNoFinaishedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683262D1F77E155000D1BCB /* SendRecordNoFinaishedCell.swift */; };
+		968326301F7D3AA2000D1BCB /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683262F1F7D3AA2000D1BCB /* TestViewController.swift */; };
+		968326321F813981000D1BCB /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968326311F813981000D1BCB /* OrderDetailsViewController.swift */; };
 		96E0CAAC1F5AB2250019CE0D /* CalculateFreightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */; };
+		96EF2B491F83355E00DC7982 /* OrderDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF2B481F83355E00DC7982 /* OrderDetailData.swift */; };
 		D8E8A7931FFDB519204A7875 /* Pods_ShipBao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94923F4781EE92B1D676E595 /* Pods_ShipBao.framework */; };
 /* End PBXBuildFile section */
 
@@ -164,6 +171,7 @@
 		9600AEE31F55AEF7004A7002 /* IdentityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentityTableViewController.swift; sourceTree = "<group>"; };
 		9600AEE51F55B3CD004A7002 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		960E0A561F5AA83C00DDF219 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		961EF5951F833C48007DCC12 /* OrderDetialCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetialCell.swift; sourceTree = "<group>"; };
 		962B924A1F4B1D150077AFF9 /* MessageOnePicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageOnePicTableViewCell.xib; sourceTree = "<group>"; };
 		962B924C1F4B26DD0077AFF9 /* MessageOnePicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageOnePicTableViewCell.swift; sourceTree = "<group>"; };
 		962B92501F4B27E80077AFF9 /* ShareMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareMessageController.swift; sourceTree = "<group>"; };
@@ -273,7 +281,13 @@
 		968326201F74035A000D1BCB /* ParcelInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParcelInfo.swift; sourceTree = "<group>"; };
 		968326211F74035A000D1BCB /* RecordDataList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordDataList.swift; sourceTree = "<group>"; };
 		968326221F74035A000D1BCB /* RecordList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordList.swift; sourceTree = "<group>"; };
+		968326291F77B4F4000D1BCB /* EDMAutoFooter+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EDMAutoFooter+Extension.swift"; sourceTree = "<group>"; };
+		9683262B1F77DD51000D1BCB /* SendRecordNoFinaishedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendRecordNoFinaishedCell.xib; sourceTree = "<group>"; };
+		9683262D1F77E155000D1BCB /* SendRecordNoFinaishedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendRecordNoFinaishedCell.swift; sourceTree = "<group>"; };
+		9683262F1F7D3AA2000D1BCB /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		968326311F813981000D1BCB /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
 		96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculateFreightView.xib; sourceTree = "<group>"; };
+		96EF2B481F83355E00DC7982 /* OrderDetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -463,6 +477,7 @@
 		966077CB1F4809950067006B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				96EF2B481F83355E00DC7982 /* OrderDetailData.swift */,
 				9683261D1F74035A000D1BCB /* CategoryCount.swift */,
 				9683261E1F74035A000D1BCB /* DataList.swift */,
 				9683261F1F74035A000D1BCB /* Parcel.swift */,
@@ -488,6 +503,9 @@
 				96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */,
 				965FEE2A1F700F9A005D9903 /* SendRecordCell.xib */,
 				965FEE2C1F729BE1005D9903 /* SendRecordCell.swift */,
+				9683262B1F77DD51000D1BCB /* SendRecordNoFinaishedCell.xib */,
+				9683262D1F77E155000D1BCB /* SendRecordNoFinaishedCell.swift */,
+				961EF5951F833C48007DCC12 /* OrderDetialCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -501,6 +519,8 @@
 				960E0A561F5AA83C00DDF219 /* Home.storyboard */,
 				967254991F652D78001A876B /* CalculateVolumeController.xib */,
 				967254951F651F97001A876B /* CalculateVolumeController.swift */,
+				9683262F1F7D3AA2000D1BCB /* TestViewController.swift */,
+				968326311F813981000D1BCB /* OrderDetailsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -694,6 +714,7 @@
 		96626A3E1F41FDAF00534C5A /* Catergory */ = {
 			isa = PBXGroup;
 			children = (
+				968326291F77B4F4000D1BCB /* EDMAutoFooter+Extension.swift */,
 				966077E31F48179B0067006B /* GeneralDataSource.swift */,
 				966077E11F48175E0067006B /* UITableView+RegisterNib.swift */,
 				966077DF1F4815D70067006B /* UIView+Init.swift */,
@@ -980,6 +1001,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96626A191F41F9FC00534C5A /* LaunchScreen.storyboard in Resources */,
+				9683262C1F77DD51000D1BCB /* SendRecordNoFinaishedCell.xib in Resources */,
 				966077DD1F480C6E0067006B /* HomeHeaderView.xib in Resources */,
 				9600AECD1F5062B1004A7002 /* Info.plist in Resources */,
 				9600AEDE1F52BACD004A7002 /* IdentityCell.xib in Resources */,
@@ -1073,10 +1095,12 @@
 				966078151F4842880067006B /* TransitionAnimationHelper.swift in Sources */,
 				968326271F74035A000D1BCB /* RecordDataList.swift in Sources */,
 				966078141F4842880067006B /* TaaskyFlipTransitionAnimation.swift in Sources */,
+				968326321F813981000D1BCB /* OrderDetailsViewController.swift in Sources */,
 				966077E41F48179B0067006B /* GeneralDataSource.swift in Sources */,
 				9660781E1F4842880067006B /* UITabBarController+TRTransition.swift in Sources */,
 				966077EA1F4825C10067006B /* SendRecordTableViewController.swift in Sources */,
 				966078181F4842880067006B /* TRViewControllerTransitionDelegate.swift in Sources */,
+				968326301F7D3AA2000D1BCB /* TestViewController.swift in Sources */,
 				967254A81F653ADA001A876B /* XZRBaseNavigationController.swift in Sources */,
 				9660781F1F4842880067006B /* TransitionTreasury.swift in Sources */,
 				966078161F4842880067006B /* TRTransitionAnimations.swift in Sources */,
@@ -1086,6 +1110,7 @@
 				9600AED31F5062B1004A7002 /* DropDown.swift in Sources */,
 				967254B71F6553AA001A876B /* Warehousesdata.swift in Sources */,
 				967254AD1F653B84001A876B /* EDMNavLeftButton.swift in Sources */,
+				96EF2B491F83355E00DC7982 /* OrderDetailData.swift in Sources */,
 				9660781D1F4842880067006B /* TRTabBarTransitionDelegate.swift in Sources */,
 				966078101F4842880067006B /* PageTransitionAnimation.swift in Sources */,
 				965DA6431F6980DF00D607E4 /* CCPScrollView.m in Sources */,
@@ -1105,6 +1130,7 @@
 				9600AEDA1F52BA92004A7002 /* IdentityCell.swift in Sources */,
 				9660781B1F4842880067006B /* UINavigationController+TRPushPop.swift in Sources */,
 				9660780A1F4842880067006B /* BlixtTransitionAnimation.swift in Sources */,
+				961EF5961F833C48007DCC12 /* OrderDetialCell.swift in Sources */,
 				96626A421F41FDF000534C5A /* UIView+Extension.swift in Sources */,
 				967254BA1F6553DD001A876B /* OrderType.swift in Sources */,
 				967254AB1F653ADA001A876B /* XZRBaseUIViewController.swift in Sources */,
@@ -1145,6 +1171,7 @@
 				9600AEE41F55AEF7004A7002 /* IdentityTableViewController.swift in Sources */,
 				966078131F4842880067006B /* SlideTransitionAnimation.swift in Sources */,
 				96626A471F41FF7C00534C5A /* Const.swift in Sources */,
+				9683262A1F77B4F4000D1BCB /* EDMAutoFooter+Extension.swift in Sources */,
 				96626A941F47DCFB00534C5A /* TwoLabeView.m in Sources */,
 				96626A751F433C4E00534C5A /* RAMRotationAnimation.swift in Sources */,
 				9600AEE61F55B3CD004A7002 /* AccountViewController.swift in Sources */,
@@ -1163,6 +1190,7 @@
 				966078191F4842880067006B /* UIViewController+TRPresent.swift in Sources */,
 				9600AECE1F5062B1004A7002 /* DPDConstants.swift in Sources */,
 				9600AEE21F55ABC9004A7002 /* identityPicCell.swift in Sources */,
+				9683262E1F77E155000D1BCB /* SendRecordNoFinaishedCell.swift in Sources */,
 				9660780B1F4842880067006B /* DefaultPushTransitionAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

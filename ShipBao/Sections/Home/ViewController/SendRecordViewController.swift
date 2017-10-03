@@ -15,6 +15,7 @@ class SendRecordViewController: ButtonBarPagerTabStripViewController,NavgationTr
     var tr_pushTransition: TRNavgationTransitionDelegate?
    
     override func viewDidLoad() {
+        self.title = "發貨記錄"
         settings.style.buttonBarItemBackgroundColor = .clear
         settings.style.buttonBarMinimumLineSpacing = 5
         
@@ -47,10 +48,8 @@ class SendRecordViewController: ButtonBarPagerTabStripViewController,NavgationTr
         var controllersArr:[UIViewController] = []
         if controllersArr.count <= 0 {
             
-            let recommend = SendRecordTableViewController(style: .plain, itemInfo:"等待處理" , type:"0")
-            let new = SendRecordTableViewController(style: .plain, itemInfo:"未完成訂單" , type:"1")
-           
-            
+            let recommend = SendRecordTableViewController(style: .plain, itemInfo:"等待處理" , type:"1")
+            let new = SendRecordTableViewController(style: .plain, itemInfo:"未完成訂單" , type:"2")
             controllersArr = [recommend,new]
         }
        
@@ -67,14 +66,12 @@ class SendRecordViewController: ButtonBarPagerTabStripViewController,NavgationTr
     
     
     override func viewWillDisappear(_ animated: Bool) {
-//         self.navigationController?.navigationBar.isTranslucent = true
         super.viewWillDisappear(animated)
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
-//        self.navigationController?.navigationBar.barTintColor = UIColor.hexStringToUIColor(hex: "#FAFBFD")
     }
     
     

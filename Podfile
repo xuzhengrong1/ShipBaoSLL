@@ -15,6 +15,8 @@ target 'ShipBao'  do
     pod 'FSPagerView'
     pod 'M13Checkbox'
 #    pod 'JKCategories'
+
+    pod 'MJRefresh'
 #    pod 'TransitionTreasury', '~> 4.0.0'
 #    pod 'RAMAnimatedTabBarController', '~> 2.0.13'
 end

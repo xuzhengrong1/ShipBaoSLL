@@ -47,18 +47,13 @@ class HomeViewController:UITableViewController {
         
         
 let dic =  cellData[indexPath.section][indexPath.row];
+        
+        
+        
+//        let vc =   getControllerFromStoryBoard("Home", identity:String(describing: TestViewController.self))
+//        navigationController?.pushViewController(vc, animated: true)
    let sendVc =      stringClassFromString(dic[kCellViewController]!) as! UIViewController.Type;
-        
-//      navigationController?.tr_pushViewController(vc, method: TRPushTransitionMethod.page)
-        
-        
-//        navigationController?.tr_pushViewController(vc, method: TRPushTransitionMethod.page)
-//        navigationController?.tr_pushViewController(sendVc, method: <#T##TransitionAnimationable#>)
-        
         navigationController?.pushViewController(sendVc.init(), animated: true)
-//        navigationController?.pushViewController(sendVc.init(), animated: true);
-        
-//         =cellData[indexPath.section];
         
     }
 }

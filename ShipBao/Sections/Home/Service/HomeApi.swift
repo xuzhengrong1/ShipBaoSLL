@@ -11,6 +11,19 @@ import SwiftyUserDefaults
 import SwiftyJSON
 extension XZRNetWorkTool{
     
+    
+    func getOrderDetailData(orderId:Int,finished:@escaping (_ orderData: OrderDetailData?)->()) -> () {
+        let params =  [ "id" : orderId];
+        
+        XZRNetWorkTool.shared.postRequest(methodName:"order_detail", params: params) { (response, error) in
+            if let responseStr = response?["data"].rawString()  {
+                
+                let orderDetailData =   OrderDetailData(JSONString: responseStr);
+                finished(orderDetailData);
+            }
+        }
+    }
+    
     func getOrderList(scene:Int,page:Int,pageSize:Int,finished:@escaping (_ homData: RecordDataList?)->()) -> () {
         let params =  [ "scene" : scene,"page": page,"page_size":pageSize];
         

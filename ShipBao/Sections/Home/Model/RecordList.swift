@@ -19,7 +19,7 @@ class RecordList : NSObject, NSCoding, Mappable{
 	var id : String?
 	var parcels : [Parcel]?
 	var paymentMethod : String?
-	var price : String?
+	var price : Double?
 	var qty : String?
 	var scene : Int?
 	var trackingMsg : String?
@@ -37,6 +37,18 @@ class RecordList : NSObject, NSCoding, Mappable{
 
 	func mapping(map: Map)
 	{
+        
+//        let transform = TransformOf<Double, String>(fromJSON: { (value: String?) -> Double? in
+//            // transform value from String? to Int?
+//            return Double(value!)
+//        }, toJSON: { (value: Double?) -> String? in
+//            // transform value from Int? to String?
+//            if let value = value {
+//                return String(value)
+//            }
+//            return nil
+//        })
+        
 		autoShipout <- map["auto_shipout"]
 		canCancel <- map["can_cancel"]
 		cdate <- map["cdate"]
@@ -70,7 +82,7 @@ class RecordList : NSObject, NSCoding, Mappable{
          id = aDecoder.decodeObject(forKey: "id") as? String
          parcels = aDecoder.decodeObject(forKey: "parcels") as? [Parcel]
          paymentMethod = aDecoder.decodeObject(forKey: "payment_method") as? String
-         price = aDecoder.decodeObject(forKey: "price") as? String
+         price = aDecoder.decodeObject(forKey: "price") as? Double
          qty = aDecoder.decodeObject(forKey: "qty") as? String
          scene = aDecoder.decodeObject(forKey: "scene") as? Int
          trackingMsg = aDecoder.decodeObject(forKey: "tracking_msg") as? String

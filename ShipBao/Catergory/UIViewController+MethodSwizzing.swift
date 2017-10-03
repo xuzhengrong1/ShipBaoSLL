@@ -21,9 +21,10 @@ extension UIViewController{
     {
         self.xl_viewWillAppear(animated);
         let index =  self.navigationController?.viewControllers.index(of: self)
-        if index == 0 {
-//            let animatedTabBar = self.tabBarController as! RAMAnimatedTabBarController
-//            animatedTabBar.animationTabBarHidden(false)
+        
+        if index == 0 && self.view.window?.rootViewController is RAMAnimatedTabBarController{
+            let animatedTabBar = self.tabBarController as! RAMAnimatedTabBarController
+            animatedTabBar.animationTabBarHidden(false)
         }
     
         let title = (self.title != nil) ? self.title! : "";
