@@ -17,6 +17,7 @@ target 'ShipBao'  do
 #    pod 'JKCategories'
 
     pod 'MJRefresh'
+    pod 'PopupDialog', '~> 0.5.4'
 #    pod 'TransitionTreasury', '~> 4.0.0'
 #    pod 'RAMAnimatedTabBarController', '~> 2.0.13'
 end

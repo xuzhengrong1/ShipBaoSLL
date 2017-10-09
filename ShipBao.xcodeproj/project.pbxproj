@@ -127,9 +127,14 @@
 		9683262E1F77E155000D1BCB /* SendRecordNoFinaishedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683262D1F77E155000D1BCB /* SendRecordNoFinaishedCell.swift */; };
 		968326301F7D3AA2000D1BCB /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9683262F1F7D3AA2000D1BCB /* TestViewController.swift */; };
 		968326321F813981000D1BCB /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968326311F813981000D1BCB /* OrderDetailsViewController.swift */; };
+		9694945C1F87CC570033043B /* DeliverAddressList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694945A1F87CC570033043B /* DeliverAddressList.swift */; };
+		9694945D1F87CC570033043B /* DeliverData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694945B1F87CC570033043B /* DeliverData.swift */; };
 		9698B3A51F83CF8800959450 /* OrderDetialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9698B3A41F83CF8800959450 /* OrderDetialCell.xib */; };
 		96E0CAAC1F5AB2250019CE0D /* CalculateFreightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */; };
 		96EF2B491F83355E00DC7982 /* OrderDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF2B481F83355E00DC7982 /* OrderDetailData.swift */; };
+		96F2AF631F866E4300600828 /* DeliveryAddrCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F2AF621F866E4300600828 /* DeliveryAddrCell.xib */; };
+		96F2AF651F86752D00600828 /* DeliveryAddrCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2AF641F86752D00600828 /* DeliveryAddrCell.swift */; };
+		96F2AF671F86786600600828 /* DeliveryAddrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2AF661F86786600600828 /* DeliveryAddrViewController.swift */; };
 		D8E8A7931FFDB519204A7875 /* Pods_ShipBao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94923F4781EE92B1D676E595 /* Pods_ShipBao.framework */; };
 /* End PBXBuildFile section */
 
@@ -287,9 +292,14 @@
 		9683262D1F77E155000D1BCB /* SendRecordNoFinaishedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendRecordNoFinaishedCell.swift; sourceTree = "<group>"; };
 		9683262F1F7D3AA2000D1BCB /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		968326311F813981000D1BCB /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
+		9694945A1F87CC570033043B /* DeliverAddressList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliverAddressList.swift; sourceTree = "<group>"; };
+		9694945B1F87CC570033043B /* DeliverData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliverData.swift; sourceTree = "<group>"; };
 		9698B3A41F83CF8800959450 /* OrderDetialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderDetialCell.xib; sourceTree = "<group>"; };
 		96E0CAAB1F5AB2250019CE0D /* CalculateFreightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculateFreightView.xib; sourceTree = "<group>"; };
 		96EF2B481F83355E00DC7982 /* OrderDetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailData.swift; sourceTree = "<group>"; };
+		96F2AF621F866E4300600828 /* DeliveryAddrCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeliveryAddrCell.xib; sourceTree = "<group>"; };
+		96F2AF641F86752D00600828 /* DeliveryAddrCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryAddrCell.swift; sourceTree = "<group>"; };
+		96F2AF661F86786600600828 /* DeliveryAddrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryAddrViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -479,6 +489,8 @@
 		966077CB1F4809950067006B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9694945A1F87CC570033043B /* DeliverAddressList.swift */,
+				9694945B1F87CC570033043B /* DeliverData.swift */,
 				96EF2B481F83355E00DC7982 /* OrderDetailData.swift */,
 				9683261D1F74035A000D1BCB /* CategoryCount.swift */,
 				9683261E1F74035A000D1BCB /* DataList.swift */,
@@ -509,6 +521,8 @@
 				9683262D1F77E155000D1BCB /* SendRecordNoFinaishedCell.swift */,
 				961EF5951F833C48007DCC12 /* OrderDetialCell.swift */,
 				9698B3A41F83CF8800959450 /* OrderDetialCell.xib */,
+				96F2AF621F866E4300600828 /* DeliveryAddrCell.xib */,
+				96F2AF641F86752D00600828 /* DeliveryAddrCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -524,6 +538,7 @@
 				967254951F651F97001A876B /* CalculateVolumeController.swift */,
 				9683262F1F7D3AA2000D1BCB /* TestViewController.swift */,
 				968326311F813981000D1BCB /* OrderDetailsViewController.swift */,
+				96F2AF661F86786600600828 /* DeliveryAddrViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1013,6 +1028,7 @@
 				962B924B1F4B1D150077AFF9 /* MessageOnePicTableViewCell.xib in Resources */,
 				96626A8E1F47DBCF00534C5A /* LLCycleScrollView.bundle in Resources */,
 				9698B3A51F83CF8800959450 /* OrderDetialCell.xib in Resources */,
+				96F2AF631F866E4300600828 /* DeliveryAddrCell.xib in Resources */,
 				960E0A571F5AA83C00DDF219 /* Home.storyboard in Resources */,
 				96626A141F41F9FC00534C5A /* Main.storyboard in Resources */,
 				9600AED81F52AACB004A7002 /* Accout.storyboard in Resources */,
@@ -1097,6 +1113,7 @@
 				96626A731F433C4E00534C5A /* RAMFrameItemAnimation.swift in Sources */,
 				967254961F651F97001A876B /* CalculateVolumeController.swift in Sources */,
 				966078151F4842880067006B /* TransitionAnimationHelper.swift in Sources */,
+				9694945C1F87CC570033043B /* DeliverAddressList.swift in Sources */,
 				968326271F74035A000D1BCB /* RecordDataList.swift in Sources */,
 				966078141F4842880067006B /* TaaskyFlipTransitionAnimation.swift in Sources */,
 				968326321F813981000D1BCB /* OrderDetailsViewController.swift in Sources */,
@@ -1122,6 +1139,7 @@
 				96626A721F433C4E00534C5A /* RAMBounceAnimation.swift in Sources */,
 				966077D71F4809CB0067006B /* HomeViewController.swift in Sources */,
 				9660781C1F4842880067006B /* TRTabBarControllerDelegate.swift in Sources */,
+				9694945D1F87CC570033043B /* DeliverData.swift in Sources */,
 				966078201F4842880067006B /* TRStatusBarStyle.swift in Sources */,
 				966078231F4B0FA80067006B /* EDMBaseNavigationController.swift in Sources */,
 				967254B81F6553AA001A876B /* Warehouseslist.swift in Sources */,
@@ -1133,6 +1151,7 @@
 				962B92751F4DC4D50077AFF9 /* LoginViewController.swift in Sources */,
 				9600AEDA1F52BA92004A7002 /* IdentityCell.swift in Sources */,
 				9660781B1F4842880067006B /* UINavigationController+TRPushPop.swift in Sources */,
+				96F2AF651F86752D00600828 /* DeliveryAddrCell.swift in Sources */,
 				9660780A1F4842880067006B /* BlixtTransitionAnimation.swift in Sources */,
 				961EF5961F833C48007DCC12 /* OrderDetialCell.swift in Sources */,
 				96626A421F41FDF000534C5A /* UIView+Extension.swift in Sources */,
@@ -1177,6 +1196,7 @@
 				96626A471F41FF7C00534C5A /* Const.swift in Sources */,
 				9683262A1F77B4F4000D1BCB /* EDMAutoFooter+Extension.swift in Sources */,
 				96626A941F47DCFB00534C5A /* TwoLabeView.m in Sources */,
+				96F2AF671F86786600600828 /* DeliveryAddrViewController.swift in Sources */,
 				96626A751F433C4E00534C5A /* RAMRotationAnimation.swift in Sources */,
 				9600AEE61F55B3CD004A7002 /* AccountViewController.swift in Sources */,
 				968326241F74035A000D1BCB /* DataList.swift in Sources */,

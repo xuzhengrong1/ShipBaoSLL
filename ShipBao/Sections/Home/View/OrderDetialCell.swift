@@ -34,4 +34,5 @@ class OrderDetialCell: XZRBaseTableviewCell {
             //self.statusTimeValueLable.text = record.trackingTime
         }
     }
+    
 }

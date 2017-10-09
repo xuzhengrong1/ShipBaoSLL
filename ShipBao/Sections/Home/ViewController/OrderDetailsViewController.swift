@@ -12,6 +12,7 @@ class OrderDetailsViewController: XZRBaseTableViewVC {
     var  recordData: OrderDetailData? = nil;
     override func viewDidLoad() {
         super.viewDidLoad();
+        self.title = "訂單詳情"
         self.tableView.registerCell(String(describing: OrderDetialCell.self))
         XZRNetWorkTool.shared.getOrderDetailData(orderId:Int((orderList?.id)!)!) { (recordData) in
             self.recordData = recordData

@@ -12,6 +12,51 @@ import SwiftyJSON
 extension XZRNetWorkTool{
     
     
+    func cancelOrder(orderId:Int,finished:@escaping (_ msg:Int?)->()) -> () {
+        let params =  [ "id" : orderId];
+        
+        XZRNetWorkTool.shared.postRequest(methodName:"order_cancel", params: params) { (response, error) in
+            if let status = response?["status"].intValue  {
+                
+                finished(status);
+                
+            }
+        }
+    }
+    
+    
+    func getAddressList(finished:@escaping (_ deliveryData:DeliverData?)->()) -> () {
+        
+        XZRNetWorkTool.shared.postRequest(methodName:"member_address_list", params: ["page_size": 10]) { (response, error) in
+            if let responseStr = response?["data"].rawString()  {
+                let deliveryListData =   DeliverData(JSONString: responseStr);
+                finished(deliveryListData);
+            }
+        }
+    }
+    
+    func changeDefaultAddr(changeId:String,finished:@escaping (_ msg:String?)->()) -> () {
+        
+        XZRNetWorkTool.shared.postRequest(methodName:"member_address_default", params: ["id": changeId]) { (response, error) in
+            if let status = response?["status"].intValue{
+                if(status == 1){
+                    finished(response?["msg"].rawString());
+                }
+            }
+        }
+    }
+    
+    func delAddr(delId:String,finished:@escaping (_ msg:String?)->()) -> () {
+        
+        XZRNetWorkTool.shared.postRequest(methodName:"member_address_delete", params: ["id": delId]) { (response, error) in
+            if let status = response?["status"].intValue{
+                if(status == 1){
+                    finished(response?["msg"].rawString());
+                }
+            }
+        }
+    }
+    
     func getOrderDetailData(orderId:Int,finished:@escaping (_ orderData: OrderDetailData?)->()) -> () {
         let params =  [ "id" : orderId];
         

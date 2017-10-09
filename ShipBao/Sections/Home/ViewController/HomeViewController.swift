@@ -16,16 +16,30 @@ class HomeViewController:UITableViewController {
     var cellData:[[[String : String]]] = [[[String : String]()]]
     override func viewDidLoad() {
     super.viewDidLoad()
-        cellData = [[[kCellViewController:String(describing: SendRecordViewController.self)]],
+        cellData =
+            [
+                [
                     [
-            [kCellViewController:"SendRecordViewController"],[kCellViewController:String(describing: CalculateVolumeController.self)],
-            [kCellViewController:"SendRecordViewController"],
-                                                                        ],
+                        kCellViewController:String(describing:SendRecordViewController.self)
+                    ]
+                ],
+                [
                     [
-                        [kCellViewController:"SendRecordViewController"]
-                        ]
-        
-        ]
+                        kCellViewController:String(describing:DeliveryAddrViewController.self)
+                    ],
+                    [
+                        kCellViewController:String(describing: CalculateVolumeController.self)
+                    ],
+                    [
+                        kCellViewController:"SendRecordViewController"
+                    ],
+                ],
+                [
+                    [
+                        kCellViewController:"SendRecordViewController"
+                    ]
+                ]
+            ]
         headerView = HomeHeaderView.loadFromNibNamed() as! HomeHeaderView
         
         headerView.autoresizingMask = .flexibleWidth
@@ -45,15 +59,16 @@ class HomeViewController:UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        if indexPath.section == 1 && indexPath.row == 0 {
+            let vc =   getControllerFromStoryBoard("Home", identity:String(describing: DeliveryAddrViewController.self)) as! DeliveryAddrViewController
+            navigationController?.pushViewController(vc, animated: true)
+        }else
+        {
+            let dic =  cellData[indexPath.section][indexPath.row];
+            let sendVc =      stringClassFromString(dic[kCellViewController]!) as! UIViewController.Type;
+            navigationController?.pushViewController(sendVc.init(), animated: true)
+        }
         
-let dic =  cellData[indexPath.section][indexPath.row];
-        
-        
-        
-//        let vc =   getControllerFromStoryBoard("Home", identity:String(describing: TestViewController.self))
-//        navigationController?.pushViewController(vc, animated: true)
-   let sendVc =      stringClassFromString(dic[kCellViewController]!) as! UIViewController.Type;
-        navigationController?.pushViewController(sendVc.init(), animated: true)
         
     }
 }

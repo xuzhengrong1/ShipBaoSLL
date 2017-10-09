@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="707" height="244"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pMj-Nj-9ht" id="hbm-cD-irS">
-                <rect key="frame" x="0.0" y="0.0" width="707" height="243"/>
+                <rect key="frame" x="0.0" y="0.0" width="707" height="243.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pyc-Io-UJm">
@@ -50,6 +50,9 @@
                                 <state key="normal" title="繼續完成">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="continutAction:" destination="pMj-Nj-9ht" eventType="touchUpInside" id="Qm3-eO-PgI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4My-OR-lEh">
                                 <rect key="frame" x="469" y="194" width="80" height="41.5"/>
@@ -57,6 +60,9 @@
                                 <state key="normal" title="取消訂單">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancel:" destination="pMj-Nj-9ht" eventType="touchUpInside" id="SxA-ch-Prt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

@@ -70,7 +70,7 @@ class SendRecordTableViewController: UITableViewController, IndicatorInfoProvide
     
     func getRecordListData(_ page: Int) {
         
-        XZRNetWorkTool.shared.getOrderList(scene: Int(self.tabType)!, page: page, pageSize: 5) { (response ) in
+        XZRNetWorkTool.shared.getOrderList(scene: Int(self.tabType)!, page: page, pageSize: 10) { (response ) in
 
             if let recods  = response?.dataList?.recordList
             {
@@ -81,9 +81,13 @@ class SendRecordTableViewController: UITableViewController, IndicatorInfoProvide
                     if(self.pageIndex <= 1)
                     {
                        self.orderList = recods
-                        DispatchQueue.main.async {
-                            self.tableView.mj_footer = MJRefreshAutoNormalFooter.createFooter(self, refreshAction: #selector(self.loadMoreData))
+                        if(recods.count == 10)
+                        {
+                            DispatchQueue.main.async {
+                                self.tableView.mj_footer = MJRefreshAutoNormalFooter.createFooter(self, refreshAction: #selector(self.loadMoreData))
+                            }
                         }
+                        
                     }else
                     {
                         
@@ -92,7 +96,7 @@ class SendRecordTableViewController: UITableViewController, IndicatorInfoProvide
                     }
 
                 }
-                if   recods.count < 5 {
+                if   recods.count < 10 {
                     self.noMoreData = true
                     if((self.tableView.mj_footer) != nil)
                     {
@@ -208,6 +212,7 @@ class SendRecordTableViewController: UITableViewController, IndicatorInfoProvide
         {
             let cell = tableView.dequeueCelllForReuse(SendRecordNoFinaishedCell.self, indexPath: indexPath) as! SendRecordNoFinaishedCell
             let cellData = self.orderList[indexPath.section];
+            cell.delegate = self
             cell.record = cellData;
             return cell;
         }
@@ -219,5 +224,15 @@ class SendRecordTableViewController: UITableViewController, IndicatorInfoProvide
 
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return itemInfo
+    }
+}
+
+extension SendRecordTableViewController: SendRecordNoFinaishedCellDelegate
+{
+    func sendRecordNoFinaishedCellClick(_ record: RecordList) {
+        if let index = self.orderList.index(of: record) {
+            self.orderList.remove(at: index)
+            self.tableView.reloadData()
+        }
     }
 }
